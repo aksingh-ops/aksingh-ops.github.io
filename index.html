@@ -464,6 +464,109 @@ nav {
 }
 .metric-label { font-size: 0.78rem; color: var(--white-dim); line-height: 1.45; }
 
+/* EXPERIENCE */
+#experience { background: var(--navy); }
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 2rem;
+  position: relative;
+}
+.experience-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--gold), transparent);
+}
+.exp-card {
+  background: var(--navy-card);
+  border: 1px solid var(--navy-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.75rem 1.75rem 2.25rem;
+  margin-left: 1.5rem;
+  position: relative;
+  transition: border-color var(--transition), transform var(--transition);
+}
+.exp-card::before {
+  content: '';
+  position: absolute;
+  left: -1.85rem;
+  top: 1.6rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--navy);
+}
+.exp-card:hover {
+  border-color: var(--navy-border);
+  transform: translateX(3px);
+}
+.exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+.exp-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+.exp-dates {
+  font-size: 0.75rem;
+  color: var(--gold);
+  font-weight: 500;
+  white-space: nowrap;
+  margin-top: 0.1rem;
+}
+.exp-company {
+  font-size: 0.85rem;
+  color: var(--white-dim);
+  margin-bottom: 0.9rem;
+  font-weight: 500;
+}
+.exp-scope {
+  font-size: 0.9rem;
+  color: var(--white-dim);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+.exp-scope strong { color: var(--white); font-weight: 600; }
+.exp-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+.exp-metric {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--gold);
+  background: var(--gold-glow);
+  border: 1px solid rgba(201,168,76,0.2);
+  border-radius: 4px;
+  padding: 0.28rem 0.65rem;
+}
+.exp-stack { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.exp-tag {
+  font-size: 0.7rem;
+  padding: 0.2rem 0.55rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--navy-border);
+  border-radius: 3px;
+  color: var(--white-faint);
+}
+
 /* INDUSTRIES */
 #industries { background: var(--navy-mid); }
 .industry-grid { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.75rem; }
@@ -535,6 +638,7 @@ footer a { color: var(--gold); }
     <span class="nav-logo">Akash Singh</span>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#impact">Impact</a></li>
@@ -660,6 +764,84 @@ footer a { color: var(--gold); }
           <p>Open to roles across the U.S. Available to start immediately.</p>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-label">Work Experience</div>
+    <h2 class="section-title">Where the work<br>actually happened.</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Real enterprise roles, real scale. The metrics below are the same ones that appear across my resume and project work.</p>
+
+    <div class="experience-timeline">
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-title">Data Analyst</div>
+          <div class="exp-dates">May 2024 &ndash; December 2025</div>
+        </div>
+        <div class="exp-company">Iowa Department of Management &middot; Ames, Iowa &middot; Contract</div>
+        <p class="exp-scope">
+          Worked on Iowa's enterprise BI modernization program, migrating data, tables,
+          reports, and dashboards from a <strong>Tyler Technologies legacy RDBMS</strong>
+          to <strong>GCP BigQuery</strong> across seven state departments. Handled
+          source-to-target data mapping, ETL execution, JSON/REST API integrations,
+          and cross-departmental data validation. Coordinated with 10+ vendors and
+          non-technical state agency stakeholders throughout.
+        </p>
+        <div class="exp-metrics">
+          <span class="exp-metric">35% reconciliation cycle reduction</span>
+          <span class="exp-metric">4 manual tasks automated</span>
+          <span class="exp-metric">25% reporting turnaround improvement</span>
+          <span class="exp-metric">7 state departments migrated</span>
+          <span class="exp-metric">18% efficiency improvement</span>
+          <span class="exp-metric">15% data accuracy improvement</span>
+        </div>
+        <div class="exp-stack">
+          <span class="exp-tag">SQL</span>
+          <span class="exp-tag">GCP BigQuery</span>
+          <span class="exp-tag">Python</span>
+          <span class="exp-tag">REST APIs</span>
+          <span class="exp-tag">JSON</span>
+          <span class="exp-tag">ETL</span>
+          <span class="exp-tag">Power BI</span>
+          <span class="exp-tag">Looker</span>
+          <span class="exp-tag">Jira</span>
+          <span class="exp-tag">Agile</span>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-title">Business Analyst / BI Engineer</div>
+          <div class="exp-dates">2021 &ndash; 2023</div>
+        </div>
+        <div class="exp-company">Bhushan &middot; Mumbai, India</div>
+        <p class="exp-scope">
+          Built and maintained BI reporting infrastructure supporting <strong>50,000+
+          monthly transactions</strong>. Designed and delivered four Excel-based
+          executive dashboards covering operational and financial KPIs. Worked
+          directly with business stakeholders to translate reporting requirements
+          into analytical deliverables.
+        </p>
+        <div class="exp-metrics">
+          <span class="exp-metric">50K+ monthly transactions tracked</span>
+          <span class="exp-metric">4 executive dashboards built</span>
+          <span class="exp-metric">20% reporting time reduction</span>
+        </div>
+        <div class="exp-stack">
+          <span class="exp-tag">Advanced Excel</span>
+          <span class="exp-tag">Power Query</span>
+          <span class="exp-tag">SQL</span>
+          <span class="exp-tag">Tableau</span>
+          <span class="exp-tag">Data Modeling</span>
+          <span class="exp-tag">Stakeholder Reporting</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
