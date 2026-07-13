@@ -687,7 +687,7 @@ footer a { color: var(--gold); }
           </div>
           <div class="stat-grid">
             <div class="stat-item">
-              <span class="stat-value">11</span>
+              <span class="stat-value">12</span>
               <span class="stat-key">Projects</span>
             </div>
             <div class="stat-item">
@@ -915,6 +915,18 @@ footer a { color: var(--gold); }
           <span class="skill-tag">Anomaly Detection</span>
         </div>
       </div>
+      <div class="skill-group">
+        <div class="skill-group-icon">🧪</div>
+        <div class="skill-group-name">API Testing &amp; Automation</div>
+        <div class="skill-tags">
+          <span class="skill-tag">Postman</span>
+          <span class="skill-tag">Playwright</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">Newman CLI</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -934,6 +946,21 @@ footer a { color: var(--gold); }
       <button class="filter-btn" data-filter="excel">Excel</button>
     </div>
     <div class="projects-grid">
+
+      <div class="project-card" data-tags="sql ml finance">
+        <div class="project-domain">Financial Services / GBM Operations Analytics</div>
+        <h3 class="project-title">GBM Settlement Intelligence</h3>
+        <p class="project-desc">End-to-end trade settlement fail rate monitoring, counterparty risk ranking, and SLO breach prediction for GBM operations. Built on SEC Regulation SHO Rules 203 and 204 with 8 published industry references. SARIMAX forecasts daily fail volumes 30 days ahead. XGBoost predicts which trades will breach the T+4 mandatory close-out deadline before it happens.</p>
+        <div class="project-metric">XGBoost AUC 0.750 &middot; SARIMAX MAPE 11.51% &middot; 10,456 records</div>
+        <div class="project-stack">
+          <span class="stack-tag">DuckDB SQL</span><span class="stack-tag">Python</span>
+          <span class="stack-tag">XGBoost</span><span class="stack-tag">SARIMAX</span>
+          <span class="stack-tag">SHAP</span><span class="stack-tag">SEC FTD Data</span>
+        </div>
+        <a href="https://github.com/aksingh-ops/gbm-settlement-intelligence" target="_blank" class="project-link">
+          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
 
       <div class="project-card" data-tags="sql ba healthcare">
         <div class="project-domain">Healthcare / Pharmacy Analytics</div>
@@ -1193,6 +1220,7 @@ footer a { color: var(--gold); }
 
 <script>
 const impacts = [
+  { value: 'AUC 0.750', label: 'SLO breach prediction model accuracy<br>GBM Settlement Intelligence -- XGBoost on SEC FTD data' },
   { value: '$562M',    label: 'Quality bonus revenue at risk identified<br>Medicare Part D Adherence Gap Analysis' },
   { value: '$1.3M',    label: 'Estimated annual reserve savings<br>AA Crew Absence Prediction' },
   { value: '$9.05M',   label: 'Annual margin loss from flat 20% promo<br>Food Delivery A/B Test' },
