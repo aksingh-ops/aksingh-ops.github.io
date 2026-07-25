@@ -687,7 +687,7 @@ footer a { color: var(--gold); }
           </div>
           <div class="stat-grid">
             <div class="stat-item">
-              <span class="stat-value">12</span>
+              <span class="stat-value">14</span>
               <span class="stat-key">Projects</span>
             </div>
             <div class="stat-item">
@@ -916,7 +916,7 @@ footer a { color: var(--gold); }
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-icon">🧪</div>
+        <div class="skill-group-icon">&lt;/&gt;</div>
         <div class="skill-group-name">API Testing &amp; Automation</div>
         <div class="skill-tags">
           <span class="skill-tag">Postman</span>
@@ -944,6 +944,8 @@ footer a { color: var(--gold); }
       <button class="filter-btn" data-filter="ml">ML &amp; Python</button>
       <button class="filter-btn" data-filter="ba">BA</button>
       <button class="filter-btn" data-filter="excel">Excel</button>
+          <button class="filter-btn" data-filter="api">API Testing</button>
+          <button class="filter-btn" data-filter="testing">Automation</button>
     </div>
     <div class="projects-grid">
 
@@ -958,6 +960,36 @@ footer a { color: var(--gold); }
           <span class="stack-tag">SHAP</span><span class="stack-tag">SEC FTD Data</span>
         </div>
         <a href="https://github.com/aksingh-ops/gbm-settlement-intelligence" target="_blank" class="project-link">
+          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card" data-tags="sql ml healthcare">
+        <div class="project-domain">Healthcare / Claims Analytics</div>
+        <h3 class="project-title">Healthcare Claims Cohort and Care Management Outcome Evaluation</h3>
+        <p class="project-desc">End-to-end analytical framework evaluating 30-day inpatient readmission drivers and quantifying the clinical and financial impact of Care Management enrollment. SQL cohort construction with LEFT JOIN date-range window, chi-square hypothesis testing, and multivariate logistic regression on a 5,000-patient CMS SynPUF-modeled claims dataset.</p>
+        <div class="project-metric">OR 0.446 &middot; ARR 12.6 pp &middot; $14.4M projected annual savings</div>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span><span class="stack-tag">SQL</span>
+          <span class="stack-tag">Chi-Square</span><span class="stack-tag">Logistic Regression</span>
+          <span class="stack-tag">Statsmodels</span><span class="stack-tag">CMS SynPUF</span>
+        </div>
+        <a href="https://github.com/aksingh-ops/healthcare-claims-cohort-evaluation" target="_blank" class="project-link">
+          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card" data-tags="api testing automation">
+        <div class="project-domain">API Testing and Automation</div>
+        <h3 class="project-title">pharma-fx-api-test-suite</h3>
+        <p class="project-desc">Automated API test suite for the FDA Drug API and Frankfurter FX API using Playwright and TypeScript. 38 tests covering status codes, schema validation, error handling, and data consistency. Postman collection with JavaScript assertions. GitHub Actions CI/CD pipeline runs all tests on every push to main.</p>
+        <div class="project-metric">38 automated tests &middot; 2 APIs &middot; GitHub Actions CI/CD</div>
+        <div class="project-stack">
+          <span class="stack-tag">Playwright</span><span class="stack-tag">TypeScript</span>
+          <span class="stack-tag">Postman</span><span class="stack-tag">Newman CLI</span>
+          <span class="stack-tag">GitHub Actions</span><span class="stack-tag">REST APIs</span>
+        </div>
+        <a href="https://github.com/aksingh-ops/pharma-fx-api-test-suite" target="_blank" class="project-link">
           View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
         </a>
       </div>
@@ -1221,6 +1253,8 @@ footer a { color: var(--gold); }
 <script>
 const impacts = [
   { value: 'AUC 0.750', label: 'SLO breach prediction model accuracy<br>GBM Settlement Intelligence -- XGBoost on SEC FTD data' },
+  { value: 'OR 0.446',  label: '55% reduction in readmission odds<br>Healthcare Claims Cohort -- Care Management Outcome Evaluation' },
+  { value: '38 Tests',  label: 'Automated API tests passing via CI/CD<br>pharma-fx-api-test-suite -- Playwright + TypeScript' },
   { value: '$562M',    label: 'Quality bonus revenue at risk identified<br>Medicare Part D Adherence Gap Analysis' },
   { value: '$1.3M',    label: 'Estimated annual reserve savings<br>AA Crew Absence Prediction' },
   { value: '$9.05M',   label: 'Annual margin loss from flat 20% promo<br>Food Delivery A/B Test' },
