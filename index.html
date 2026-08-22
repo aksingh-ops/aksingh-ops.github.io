@@ -3,29 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Akash Singh, Data Analyst and Business Analyst. SQL, Python, Power BI, GCP. 11 projects across 9 industries.">
-<title>Akash Singh · Data & Business Analyst</title>
+<meta name="description" content="Akash Singh, Data Analyst and Business Analyst. SQL, Python, Power BI, Tableau, GCP BigQuery. 14 portfolio projects across 9 industries.">
+<title>Akash Singh - Data Analyst</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy:       #0A1628;
-  --navy-mid:   #0F2040;
-  --navy-card:  #112244;
-  --navy-border:#1a3255;
-  --gold:       #C9A84C;
-  --gold-dim:   #a07830;
-  --gold-glow:  rgba(201,168,76,0.12);
-  --white:      #F0EBE0;
-  --white-dim:  #B8C4D4;
-  --white-faint:#6a80a0;
-  --text:       #E8E2D8;
-  --radius:     6px;
-  --radius-lg:  12px;
-  --transition: 0.25s ease;
+  --navy:        #0A1628;
+  --navy-mid:    #0F2040;
+  --navy-card:   #112244;
+  --navy-border: #1a3255;
+  --gold:        #C9A84C;
+  --gold-dim:    #a07830;
+  --gold-glow:   rgba(201,168,76,0.12);
+  --white:       #F0EBE0;
+  --white-dim:   #B8C4D4;
+  --white-faint: #6a80a0;
+  --text:        #E8E2D8;
+  --radius:      6px;
+  --radius-lg:   12px;
+  --transition:  0.25s ease;
 }
-
+[data-theme="light"] {
+  --navy:        #f7f5f0;
+  --navy-mid:    #edeae3;
+  --navy-card:   #ffffff;
+  --navy-border: #d5cfc4;
+  --white:       #1a1a2e;
+  --white-dim:   #3a3a5c;
+  --white-faint: #6a6a8a;
+  --text:        #2a2a3e;
+  --gold:        #8a6820;
+  --gold-glow:   rgba(138,104,32,0.10);
+}
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -36,597 +47,280 @@ body {
   font-weight: 400;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 a { color: var(--gold); text-decoration: none; transition: opacity var(--transition); }
 a:hover { opacity: 0.8; }
-
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
 .section { padding: 88px 0; }
-
 .section-label {
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.6rem;
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem;
 }
 .section-title {
   font-family: 'Playfair Display', Georgia, serif;
   font-size: clamp(1.75rem, 3.2vw, 2.5rem);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.2;
-  margin-bottom: 0.9rem;
+  font-weight: 700; color: var(--white); line-height: 1.2; margin-bottom: 0.9rem;
 }
-.section-sub {
-  font-size: 0.97rem;
-  color: var(--white-dim);
-  max-width: 560px;
-  line-height: 1.75;
-}
-.divider {
-  width: 44px;
-  height: 2px;
-  background: var(--gold);
-  margin: 1rem 0 1.75rem;
-}
+.section-sub { font-size: 0.97rem; color: var(--white-dim); max-width: 560px; line-height: 1.75; }
+.divider { width: 44px; height: 2px; background: var(--gold); margin: 1rem 0 1.75rem; }
 
 /* NAV */
 nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 100;
-  background: rgba(10, 22, 40, 0.93);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--navy-border);
+  position: fixed; top: 0; width: 100%; z-index: 100;
+  background: rgba(10,22,40,0.92); backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--navy-border); transition: background 0.3s;
 }
+[data-theme="light"] nav { background: rgba(247,245,240,0.92); }
 .nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between; height: 60px;
 }
 .nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
-  font-style: italic;
-  color: var(--gold);
+  font-family: 'Playfair Display', serif; font-size: 1.15rem;
+  color: var(--white); font-weight: 700; letter-spacing: 0.02em;
 }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
-  font-size: 0.83rem;
-  font-weight: 500;
-  color: var(--white-dim);
-  letter-spacing: 0.03em;
-  transition: color var(--transition);
-}
+.nav-logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { font-size: 0.85rem; font-weight: 500; color: var(--white-dim); transition: color var(--transition); }
 .nav-links a:hover { color: var(--gold); opacity: 1; }
-.nav-cta {
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 0.42rem 1rem;
-  border: 1px solid var(--gold);
-  border-radius: var(--radius);
-  color: var(--gold) !important;
-  transition: background var(--transition);
+.theme-toggle {
+  background: none; border: 1px solid var(--navy-border);
+  color: var(--white-dim); cursor: pointer; padding: 5px 10px;
+  border-radius: var(--radius); font-size: 0.8rem; transition: all var(--transition);
 }
-.nav-cta:hover { background: var(--gold-glow); }
+.theme-toggle:hover { border-color: var(--gold); color: var(--gold); }
 
 /* HERO */
-#hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  padding-top: 60px;
-  position: relative;
-  overflow: hidden;
+.hero {
+  min-height: 100vh; display: flex; align-items: center;
+  padding-top: 60px; position: relative; overflow: hidden;
 }
-.hero-bg {
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 60% 50% at 70% 40%, rgba(201,168,76,0.05) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 60% at 20% 70%, rgba(10,49,97,0.35) 0%, transparent 60%);
+.hero::before {
+  content: ''; position: absolute; top: -40%; right: -20%;
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
   pointer-events: none;
 }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  position: relative;
+.hero-inner {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 4rem; align-items: center; width: 100%; max-width: 1100px;
+  margin: 0 auto; padding: 0 2rem;
 }
-.hero-eyebrow {
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-}
-.hero-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 28px;
-  height: 1px;
-  background: var(--gold);
-}
+.hero-greeting { font-size: 0.95rem; color: var(--gold); font-weight: 500; margin-bottom: 1rem; }
 .hero-name {
   font-family: 'Playfair Display', Georgia, serif;
-  font-size: clamp(2.6rem, 5vw, 4rem);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.1;
-  margin-bottom: 0.4rem;
+  font-size: clamp(2.8rem, 6vw, 4.5rem); font-weight: 700;
+  color: var(--white); line-height: 1.1; margin-bottom: 0.5rem;
 }
-.hero-name em { font-style: italic; color: var(--gold); }
 .hero-role {
-  font-size: 0.97rem;
-  color: var(--white-dim);
-  margin-bottom: 1.4rem;
-  letter-spacing: 0.01em;
+  font-size: clamp(1rem, 2vw, 1.3rem); color: var(--gold);
+  font-weight: 500; margin-bottom: 1.4rem; letter-spacing: 0.01em;
 }
-.hero-desc {
-  font-size: 0.97rem;
-  color: var(--white-dim);
-  line-height: 1.8;
-  max-width: 460px;
-  margin-bottom: 2.25rem;
+.hero-tagline { font-size: 1rem; color: var(--white-dim); max-width: 520px; line-height: 1.75; margin-bottom: 2rem; }
+.hero-stats {
+  display: flex; gap: 2.5rem; margin-bottom: 2.5rem; flex-wrap: wrap;
 }
-.hero-btns { display: flex; gap: 0.9rem; flex-wrap: wrap; }
-.btn-primary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.7rem 1.6rem;
-  background: var(--gold);
-  color: var(--navy) !important;
-  font-weight: 700;
-  font-size: 0.85rem;
-  border-radius: var(--radius);
-  transition: opacity var(--transition), transform var(--transition);
-}
-.btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
-.btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.7rem 1.6rem;
-  border: 1px solid var(--navy-border);
-  color: var(--white-dim) !important;
-  font-weight: 500;
-  font-size: 0.85rem;
-  border-radius: var(--radius);
-  transition: border-color var(--transition), color var(--transition);
-}
-.btn-secondary:hover { border-color: var(--gold); color: var(--gold) !important; opacity: 1; }
-
-/* Hero panel */
-.hero-panel {
-  background: var(--navy-card);
-  border: 1px solid var(--navy-border);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
-  position: relative;
-  overflow: hidden;
-}
-.hero-panel::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, var(--gold), transparent);
-}
-.panel-label {
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--white-faint);
-  margin-bottom: 1.4rem;
-}
-.impact-counter {
-  text-align: center;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--navy-border);
-  margin-bottom: 1.4rem;
-}
-.counter-value {
+.hero-stat-val {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 700;
-  color: var(--gold);
-  line-height: 1;
-  display: block;
-  transition: opacity 0.3s ease;
+  font-size: 2rem; font-weight: 700; color: var(--gold); display: block;
 }
-.counter-label {
-  font-size: 0.8rem;
-  color: var(--white-dim);
-  margin-top: 0.4rem;
-  min-height: 2.4rem;
-  display: block;
-  transition: opacity 0.3s ease;
-  line-height: 1.5;
+.hero-stat-key { font-size: 0.75rem; color: var(--white-faint); text-transform: uppercase; letter-spacing: 0.12em; }
+.hero-cta { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--gold); color: #0A1628; padding: 0.7rem 1.8rem;
+  border-radius: var(--radius); font-weight: 600; font-size: 0.88rem;
+  transition: all var(--transition); border: none; cursor: pointer; display: inline-block;
 }
-.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-.stat-item { text-align: center; }
-.stat-value { font-size: 1.35rem; font-weight: 700; color: var(--white); display: block; }
-.stat-key { font-size: 0.7rem; color: var(--white-faint); margin-top: 0.12rem; }
+.btn-primary:hover { background: #d4b55a; color: #0A1628; opacity: 1; transform: translateY(-1px); }
+.btn-outline {
+  border: 1px solid var(--navy-border); color: var(--white-dim);
+  padding: 0.7rem 1.8rem; border-radius: var(--radius); font-weight: 500;
+  font-size: 0.88rem; transition: all var(--transition); display: inline-block;
+}
+.btn-outline:hover { border-color: var(--gold); color: var(--gold); opacity: 1; transform: translateY(-1px); }
+
+/* HERO PHOTO */
+.hero-photo-wrap {
+  position: relative; flex-shrink: 0;
+}
+.hero-photo-ring {
+  width: 240px; height: 240px; border-radius: 50%;
+  border: 2px solid var(--gold); padding: 6px;
+  background: linear-gradient(135deg, var(--navy-mid), var(--navy-card));
+}
+.hero-photo {
+  width: 100%; height: 100%; border-radius: 50%;
+  object-fit: cover; display: block;
+  background: var(--navy-card);
+}
+.hero-photo-badge {
+  position: absolute; bottom: 12px; right: -8px;
+  background: var(--gold); color: #0A1628;
+  font-size: 0.72rem; font-weight: 700; padding: 5px 10px;
+  border-radius: 20px; white-space: nowrap;
+}
+.available-dot {
+  display: inline-block; width: 7px; height: 7px;
+  background: #2ecc71; border-radius: 50%; margin-right: 5px;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.4; } }
+
+/* IMPACT TICKER */
+.impact-bar {
+  background: var(--navy-mid); border-top: 1px solid var(--navy-border);
+  border-bottom: 1px solid var(--navy-border); padding: 1.1rem 0; overflow: hidden;
+}
+.impact-track { display: flex; gap: 4rem; animation: scroll-left 28s linear infinite; width: max-content; }
+.impact-track:hover { animation-play-state: paused; }
+.impact-item { display: flex; align-items: center; gap: 0.7rem; white-space: nowrap; }
+.impact-val { font-family: 'Playfair Display', serif; color: var(--gold); font-size: 1.1rem; font-weight: 700; }
+.impact-label { font-size: 0.78rem; color: var(--white-dim); }
+@keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
 /* ABOUT */
-#about { background: var(--navy-mid); }
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: start;
+.about-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 4rem; align-items: start; }
+.about-text p { color: var(--white-dim); margin-bottom: 1.1rem; line-height: 1.8; }
+.about-text strong { color: var(--white); }
+.about-quick { display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1.8rem; }
+.about-quick-item { display: flex; align-items: center; gap: 0.9rem; font-size: 0.9rem; color: var(--white-dim); }
+.about-quick-icon { color: var(--gold); font-size: 1rem; width: 20px; flex-shrink: 0; }
+.about-card {
+  background: var(--navy-card); border: 1px solid var(--navy-border);
+  border-radius: var(--radius-lg); padding: 2rem;
 }
-.about-text p {
-  color: var(--white-dim);
-  line-height: 1.85;
-  margin-bottom: 1.1rem;
-  font-size: 0.95rem;
+.about-card-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--gold); margin-bottom: 1.2rem; }
+.cert-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+.cert-list li {
+  font-size: 0.88rem; color: var(--white-dim);
+  padding-left: 1.2rem; position: relative;
 }
-.about-text p strong { color: var(--white); font-weight: 600; }
-.about-highlights { display: flex; flex-direction: column; gap: 1.1rem; }
-.highlight-card {
-  background: var(--navy-card);
-  border: 1px solid var(--navy-border);
-  border-left: 3px solid var(--gold);
-  border-radius: var(--radius);
-  padding: 1rem 1.15rem;
+.cert-list li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 5px; height: 5px; background: var(--gold); border-radius: 50%; }
+
+/* EXPERIENCE */
+.exp-timeline { position: relative; padding-left: 2rem; }
+.exp-timeline::before {
+  content: ''; position: absolute; left: 0; top: 6px; bottom: 6px;
+  width: 1px; background: var(--navy-border);
 }
-.highlight-card h4 { font-size: 0.87rem; font-weight: 600; color: var(--white); margin-bottom: 0.3rem; }
-.highlight-card p { font-size: 0.82rem; color: var(--white-dim); line-height: 1.65; }
-.edu-block { margin-top: 1.75rem; padding-top: 1.75rem; border-top: 1px solid var(--navy-border); }
-.edu-item { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.9rem; gap: 1rem; }
-.edu-degree { font-size: 0.88rem; font-weight: 600; color: var(--white); }
-.edu-school { font-size: 0.8rem; color: var(--white-dim); margin-top: 0.12rem; }
-.edu-year { font-size: 0.76rem; color: var(--gold); white-space: nowrap; font-weight: 500; }
-.cert-list { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 1.25rem; }
-.cert-tag {
-  font-size: 0.7rem;
-  padding: 0.28rem 0.65rem;
-  border: 1px solid var(--navy-border);
-  border-radius: 99px;
-  color: var(--white-dim);
-  background: var(--navy-card);
+.exp-item { position: relative; margin-bottom: 2.5rem; }
+.exp-item::before {
+  content: ''; position: absolute; left: -2.4rem; top: 6px;
+  width: 10px; height: 10px; background: var(--gold); border-radius: 50%;
+  border: 2px solid var(--navy);
+}
+.exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.4rem; }
+.exp-title { font-weight: 600; color: var(--white); font-size: 1rem; }
+.exp-dates { font-size: 0.8rem; color: var(--white-faint); white-space: nowrap; }
+.exp-company { font-size: 0.88rem; color: var(--gold); margin-bottom: 0.8rem; }
+.exp-bullets { list-style: none; }
+.exp-bullets li {
+  font-size: 0.88rem; color: var(--white-dim); padding-left: 1.2rem;
+  position: relative; margin-bottom: 0.45rem; line-height: 1.6;
+}
+.exp-bullets li::before { content: '-'; position: absolute; left: 0; color: var(--gold); }
+.exp-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+.exp-tag {
+  font-size: 0.72rem; padding: 3px 10px; border-radius: 20px;
+  background: var(--gold-glow); border: 1px solid var(--navy-border); color: var(--white-dim);
 }
 
 /* SKILLS */
-#skills { background: var(--navy); }
-.skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.25rem; }
+.skills-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 1.5rem; }
 .skill-group {
-  background: var(--navy-card);
-  border: 1px solid var(--navy-border);
-  border-radius: var(--radius-lg);
-  padding: 1.4rem;
+  background: var(--navy-card); border: 1px solid var(--navy-border);
+  border-radius: var(--radius-lg); padding: 1.5rem;
   transition: border-color var(--transition), transform var(--transition);
 }
-.skill-group:hover { border-color: var(--gold-dim); transform: translateY(-2px); }
-.skill-group-icon { font-size: 1.3rem; margin-bottom: 0.65rem; }
-.skill-group-name {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.7rem;
-}
-.skill-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+.skill-group:hover { border-color: var(--gold); transform: translateY(-2px); }
+.skill-group-name { font-weight: 600; color: var(--white); font-size: 0.9rem; margin-bottom: 1rem; }
+.skill-tags { display: flex; flex-wrap: wrap; gap: 0.45rem; }
 .skill-tag {
-  font-size: 0.73rem;
-  padding: 0.22rem 0.55rem;
-  background: rgba(201,168,76,0.07);
-  border: 1px solid rgba(201,168,76,0.18);
-  border-radius: 4px;
-  color: var(--white-dim);
+  font-size: 0.73rem; padding: 3px 10px; border-radius: 20px;
+  background: var(--gold-glow); border: 1px solid var(--navy-border); color: var(--white-dim);
+}
+
+/* INDUSTRY BADGES */
+.industry-row { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.5rem; }
+.industry-badge {
+  font-size: 0.73rem; font-weight: 500; padding: 5px 14px;
+  border-radius: 20px; color: rgba(255,255,255,0.85);
 }
 
 /* PROJECTS */
-#projects { background: var(--navy-mid); }
-.project-filters { display: flex; gap: 0.55rem; flex-wrap: wrap; margin-bottom: 2.25rem; }
+.filter-row { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
 .filter-btn {
-  font-size: 0.76rem;
-  font-weight: 500;
-  padding: 0.38rem 0.95rem;
-  border: 1px solid var(--navy-border);
-  border-radius: 99px;
-  color: var(--white-dim);
-  background: transparent;
-  cursor: pointer;
-  transition: all var(--transition);
-  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem; padding: 5px 14px; border-radius: 20px; cursor: pointer;
+  border: 1px solid var(--navy-border); background: transparent;
+  color: var(--white-dim); transition: all var(--transition);
 }
 .filter-btn:hover, .filter-btn.active {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: var(--gold-glow);
+  background: var(--gold); border-color: var(--gold); color: #0A1628; font-weight: 600;
 }
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(310px, 1fr)); gap: 1.35rem; }
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
 .project-card {
-  background: var(--navy-card);
-  border: 1px solid var(--navy-border);
-  border-radius: var(--radius-lg);
-  padding: 1.6rem;
-  display: flex;
-  flex-direction: column;
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
-  position: relative;
-  overflow: hidden;
+  background: var(--navy-card); border: 1px solid var(--navy-border);
+  border-radius: var(--radius-lg); padding: 1.6rem;
+  transition: all var(--transition); display: flex; flex-direction: column;
 }
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--gold-dim), transparent);
-  opacity: 0;
-  transition: opacity var(--transition);
-}
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.28);
-}
-.project-card:hover::before { opacity: 1; }
-.project-domain {
-  font-size: 0.67rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 0.65rem;
-}
-.project-title {
-  font-size: 0.97rem;
-  font-weight: 600;
-  color: var(--white);
-  line-height: 1.35;
-  margin-bottom: 0.65rem;
-}
-.project-desc {
-  font-size: 0.83rem;
-  color: var(--white-dim);
-  line-height: 1.7;
-  flex: 1;
-  margin-bottom: 1.1rem;
-}
+.project-card:hover { border-color: var(--gold); transform: translateY(-3px); box-shadow: 0 12px 32px rgba(201,168,76,0.08); }
+.project-domain { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.14em; color: var(--gold); margin-bottom: 0.6rem; }
+.project-title { font-weight: 600; color: var(--white); font-size: 0.97rem; margin-bottom: 0.7rem; line-height: 1.4; }
+.project-desc { font-size: 0.84rem; color: var(--white-dim); line-height: 1.65; margin-bottom: 0.9rem; flex: 1; }
 .project-metric {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--gold);
-  background: var(--gold-glow);
-  border: 1px solid rgba(201,168,76,0.2);
-  border-radius: 4px;
-  padding: 0.28rem 0.6rem;
-  margin-bottom: 1.1rem;
+  font-size: 0.78rem; font-weight: 600; color: var(--gold);
+  background: var(--gold-glow); border: 1px solid rgba(201,168,76,0.2);
+  padding: 5px 12px; border-radius: var(--radius); margin-bottom: 1rem; display: inline-block;
 }
-.project-stack { display: flex; flex-wrap: wrap; gap: 0.32rem; margin-bottom: 1.1rem; }
+.project-stack { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.1rem; }
 .stack-tag {
-  font-size: 0.68rem;
-  padding: 0.18rem 0.5rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--navy-border);
-  border-radius: 3px;
-  color: var(--white-faint);
+  font-size: 0.7rem; padding: 2px 9px; border-radius: 20px;
+  background: var(--gold-glow); border: 1px solid var(--navy-border); color: var(--white-dim);
 }
 .project-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--gold);
-  margin-top: auto;
+  font-size: 0.82rem; color: var(--gold); font-weight: 500;
+  display: inline-flex; align-items: center; gap: 5px; margin-top: auto;
   transition: gap var(--transition);
 }
-.project-link:hover { gap: 0.62rem; opacity: 1; }
-
-/* IMPACT */
-#impact { background: var(--navy); }
-.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(195px, 1fr)); gap: 1.1rem; margin-top: 2.25rem; }
-.metric-card {
-  background: var(--navy-card);
-  border: 1px solid var(--navy-border);
-  border-radius: var(--radius-lg);
-  padding: 1.6rem 1.4rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.metric-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; left: 25%; right: 25%;
-  height: 1px;
-  background: var(--gold);
-  opacity: 0.35;
-}
-.metric-value {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: var(--gold);
-  display: block;
-  line-height: 1;
-  margin-bottom: 0.45rem;
-}
-.metric-label { font-size: 0.78rem; color: var(--white-dim); line-height: 1.45; }
-
-/* EXPERIENCE */
-#experience { background: var(--navy); }
-.experience-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-  margin-top: 2rem;
-  position: relative;
-}
-.experience-timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 8px;
-  bottom: 8px;
-  width: 1px;
-  background: linear-gradient(180deg, var(--gold), transparent);
-}
-.exp-card {
-  background: var(--navy-card);
-  border: 1px solid var(--navy-border);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.75rem 1.75rem 2.25rem;
-  margin-left: 1.5rem;
-  position: relative;
-  transition: border-color var(--transition), transform var(--transition);
-}
-.exp-card::before {
-  content: '';
-  position: absolute;
-  left: -1.85rem;
-  top: 1.6rem;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--gold);
-  border: 2px solid var(--navy);
-}
-.exp-card:hover {
-  border-color: var(--navy-border);
-  transform: translateX(3px);
-}
-.exp-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
-  margin-bottom: 0.4rem;
-  flex-wrap: wrap;
-}
-.exp-title {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--white);
-}
-.exp-dates {
-  font-size: 0.75rem;
-  color: var(--gold);
-  font-weight: 500;
-  white-space: nowrap;
-  margin-top: 0.1rem;
-}
-.exp-company {
-  font-size: 0.85rem;
-  color: var(--white-dim);
-  margin-bottom: 0.9rem;
-  font-weight: 500;
-}
-.exp-scope {
-  font-size: 0.9rem;
-  color: var(--white-dim);
-  line-height: 1.75;
-  margin-bottom: 1.25rem;
-}
-.exp-scope strong { color: var(--white); font-weight: 600; }
-.exp-metrics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-bottom: 1.1rem;
-}
-.exp-metric {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--gold);
-  background: var(--gold-glow);
-  border: 1px solid rgba(201,168,76,0.2);
-  border-radius: 4px;
-  padding: 0.28rem 0.65rem;
-}
-.exp-stack { display: flex; flex-wrap: wrap; gap: 0.35rem; }
-.exp-tag {
-  font-size: 0.7rem;
-  padding: 0.2rem 0.55rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid var(--navy-border);
-  border-radius: 3px;
-  color: var(--white-faint);
-}
-
-/* INDUSTRIES */
-#industries { background: var(--navy-mid); }
-.industry-grid { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 1.75rem; }
-.industry-pill {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--navy-border);
-  border-radius: 99px;
-  font-size: 0.8rem;
-  color: var(--white-dim);
-  background: var(--navy-card);
-  transition: all var(--transition);
-}
-.industry-pill:hover { border-color: var(--gold-dim); color: var(--white); }
+.project-link:hover { gap: 8px; opacity: 0.8; }
 
 /* CONTACT */
-#contact { background: var(--navy); }
-.contact-inner { max-width: 600px; margin: 0 auto; text-align: center; }
-.contact-inner .section-title { text-align: center; }
-.contact-inner .divider { margin: 1rem auto 1.75rem; }
-.contact-inner .section-sub { text-align: center; margin: 0 auto 2.25rem; }
-.contact-links { display: flex; justify-content: center; gap: 0.9rem; flex-wrap: wrap; }
-.contact-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.65rem 1.3rem;
-  border: 1px solid var(--navy-border);
-  border-radius: var(--radius);
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--white-dim);
-  transition: all var(--transition);
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.contact-links { display: flex; flex-direction: column; gap: 1rem; }
+.contact-link {
+  display: flex; align-items: center; gap: 0.85rem;
+  padding: 0.9rem 1.2rem; background: var(--navy-card);
+  border: 1px solid var(--navy-border); border-radius: var(--radius-lg);
+  color: var(--white-dim); font-size: 0.88rem; transition: all var(--transition);
 }
-.contact-chip:hover { border-color: var(--gold); color: var(--gold); background: var(--gold-glow); opacity: 1; }
-.contact-chip svg { width: 15px; height: 15px; }
+.contact-link:hover { border-color: var(--gold); color: var(--gold); opacity: 1; transform: translateX(4px); }
+.contact-icon { font-size: 1.1rem; width: 24px; flex-shrink: 0; }
+.contact-card {
+  background: var(--navy-card); border: 1px solid var(--navy-border);
+  border-radius: var(--radius-lg); padding: 2rem;
+}
+.contact-card p { color: var(--white-dim); font-size: 0.92rem; line-height: 1.75; margin-bottom: 1.5rem; }
 
 /* FOOTER */
 footer {
-  background: var(--navy-mid);
-  border-top: 1px solid var(--navy-border);
-  padding: 1.75rem 2rem;
-  text-align: center;
+  border-top: 1px solid var(--navy-border); padding: 2rem 0;
+  text-align: center; font-size: 0.82rem; color: var(--white-faint);
 }
-footer p { font-size: 0.76rem; color: var(--white-faint); }
-footer a { color: var(--gold); }
 
-/* RESPONSIVE */
+/* ANIMATIONS */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
 @media (max-width: 768px) {
-  .hero-grid { grid-template-columns: 1fr; gap: 2.25rem; }
-  .hero-panel { order: -1; }
-  .about-grid { grid-template-columns: 1fr; gap: 2.75rem; }
-  .nav-links { display: none; }
-  .container { padding: 0 1.25rem; }
-  .section { padding: 60px 0; }
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .hero-inner { grid-template-columns: 1fr; text-align: center; }
+  .hero-photo-wrap { display: flex; justify-content: center; order: -1; }
+  .hero-photo-ring { width: 180px; height: 180px; }
+  .hero-stats { justify-content: center; }
+  .hero-cta { justify-content: center; }
+  .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .hero-tagline { margin: 0 auto 2rem; }
+  .nav-links a:not(:last-child) { display: none; }
 }
 </style>
 </head>
@@ -635,133 +329,164 @@ footer a { color: var(--gold); }
 <!-- NAV -->
 <nav>
   <div class="nav-inner">
-    <span class="nav-logo">Akash Singh</span>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#impact">Impact</a></li>
-      <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
-    </ul>
+    <div class="nav-logo">A<span>.</span>Singh</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button class="theme-toggle" onclick="toggleTheme()">Light</button>
+    </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-bg"></div>
-  <div class="container">
-    <div class="hero-grid">
-      <div class="hero-left">
-        <div class="hero-eyebrow">Data Analyst &amp; Business Analyst</div>
-        <h1 class="hero-name">Akash<br><em>Singh</em></h1>
-        <p class="hero-role">M.S. Business Analytics, Iowa State University &middot; 3+ Years Experience</p>
-        <p class="hero-desc">
-          I help organizations stop guessing and start deciding. From SQL pipelines and
-          machine learning models to plain-English recommendations your leadership can act on
-          the same day, I bridge the gap between raw data and real business outcomes across
-          nine industries.
-        </p>
-        <div class="hero-btns">
-          <a href="#projects" class="btn-primary">
-            View Projects
-            <svg viewBox="0 0 20 20" fill="currentColor" width="15" height="15"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/akash-bhupesh-singh/" target="_blank" class="btn-secondary">
-            LinkedIn
-            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-          <a href="https://github.com/aksingh-ops" target="_blank" class="btn-secondary">
-            GitHub
-            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <p class="hero-greeting">Hi, I am</p>
+      <h1 class="hero-name">Akash Singh</h1>
+      <p class="hero-role">Data Analyst &amp; Business Analyst</p>
+      <p class="hero-tagline">
+        I turn raw, messy data into decisions that move organizations forward.
+        Currently at <strong style="color:var(--white)">Benda Infotech</strong> building SQL Server and Tableau
+        solutions for banking and financial services clients.
+      </p>
+      <div class="hero-stats">
+        <div>
+          <span class="hero-stat-val">14</span>
+          <span class="hero-stat-key">Projects</span>
+        </div>
+        <div>
+          <span class="hero-stat-val">9</span>
+          <span class="hero-stat-key">Industries</span>
+        </div>
+        <div>
+          <span class="hero-stat-val">3+</span>
+          <span class="hero-stat-key">Years Exp</span>
+        </div>
+        <div>
+          <span class="hero-stat-val">35%</span>
+          <span class="hero-stat-key">Error Reduction</span>
         </div>
       </div>
-
-      <div class="hero-right">
-        <div class="hero-panel">
-          <div class="panel-label">Real Business Impact Across 11 Projects</div>
-          <div class="impact-counter">
-            <span class="counter-value" id="counter-val">$562M</span>
-            <span class="counter-label" id="counter-lbl">Quality bonus revenue at risk identified<br>Medicare Part D Adherence Gap Analysis</span>
-          </div>
-          <div class="stat-grid">
-            <div class="stat-item">
-              <span class="stat-value">14</span>
-              <span class="stat-key">Projects</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value">9</span>
-              <span class="stat-key">Industries</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value">3+</span>
-              <span class="stat-key">Years Experience</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value">35%</span>
-              <span class="stat-key">Reconciliation Reduction</span>
-            </div>
-          </div>
-        </div>
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="https://www.linkedin.com/in/akash-bhupesh-singh/" target="_blank" class="btn-outline">LinkedIn</a>
+        <a href="https://github.com/aksingh-ops" target="_blank" class="btn-outline">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-ring">
+        <img
+          src="https://avatars.githubusercontent.com/aksingh-ops"
+          alt="Akash Singh"
+          class="hero-photo"
+          onerror="this.style.background='linear-gradient(135deg,#112244,#1a3255)';this.src=''"
+        />
+      </div>
+      <div class="hero-photo-badge">
+        <span class="available-dot"></span>Open to Work
       </div>
     </div>
   </div>
 </section>
 
+<!-- IMPACT TICKER -->
+<div class="impact-bar">
+  <div class="impact-track">
+    <div class="impact-item"><span class="impact-val">35%</span><span class="impact-label">Reconciliation error reduction -- Iowa DOM</span></div>
+    <div class="impact-item"><span class="impact-val">$562M</span><span class="impact-label">Revenue at risk identified -- Medicare Part D</span></div>
+    <div class="impact-item"><span class="impact-val">AUC 0.750</span><span class="impact-label">SLO breach prediction -- GBM Settlement Intelligence</span></div>
+    <div class="impact-item"><span class="impact-val">$1.3M</span><span class="impact-label">Reserve savings identified -- AA Crew Absence Model</span></div>
+    <div class="impact-item"><span class="impact-val">OR 0.446</span><span class="impact-label">Care Management effect -- Healthcare Claims Cohort</span></div>
+    <div class="impact-item"><span class="impact-val">$9.05M</span><span class="impact-label">Annual loss risk flagged -- Food Delivery A/B Test</span></div>
+    <div class="impact-item"><span class="impact-val">38 Tests</span><span class="impact-label">Automated API tests -- pharma-fx-api-test-suite</span></div>
+    <div class="impact-item"><span class="impact-val">AUC 0.87</span><span class="impact-label">Crew absence prediction -- AA Operations ML</span></div>
+    <div class="impact-item"><span class="impact-val">7 Depts</span><span class="impact-label">Migrated to GCP BigQuery -- Iowa DOM</span></div>
+    <!-- Duplicate for seamless loop -->
+    <div class="impact-item"><span class="impact-val">35%</span><span class="impact-label">Reconciliation error reduction -- Iowa DOM</span></div>
+    <div class="impact-item"><span class="impact-val">$562M</span><span class="impact-label">Revenue at risk identified -- Medicare Part D</span></div>
+    <div class="impact-item"><span class="impact-val">AUC 0.750</span><span class="impact-label">SLO breach prediction -- GBM Settlement Intelligence</span></div>
+    <div class="impact-item"><span class="impact-val">$1.3M</span><span class="impact-label">Reserve savings identified -- AA Crew Absence Model</span></div>
+    <div class="impact-item"><span class="impact-val">OR 0.446</span><span class="impact-label">Care Management effect -- Healthcare Claims Cohort</span></div>
+    <div class="impact-item"><span class="impact-val">$9.05M</span><span class="impact-label">Annual loss risk flagged -- Food Delivery A/B Test</span></div>
+    <div class="impact-item"><span class="impact-val">38 Tests</span><span class="impact-label">Automated API tests -- pharma-fx-api-test-suite</span></div>
+    <div class="impact-item"><span class="impact-val">AUC 0.87</span><span class="impact-label">Crew absence prediction -- AA Operations ML</span></div>
+    <div class="impact-item"><span class="impact-val">7 Depts</span><span class="impact-label">Migrated to GCP BigQuery -- Iowa DOM</span></div>
+  </div>
+</div>
+
 <!-- ABOUT -->
-<section id="about" class="section">
+<section class="section" id="about">
   <div class="container">
+    <div class="fade-in">
+      <p class="section-label">About</p>
+      <h2 class="section-title">Data that drives decisions</h2>
+      <div class="divider"></div>
+    </div>
     <div class="about-grid">
-      <div class="about-text">
-        <div class="section-label">About Me</div>
-        <h2 class="section-title">Technical depth.<br>Business fluency.</h2>
-        <div class="divider"></div>
-        <p>Most analytics teams are good at one of two things: building technically rigorous models, or communicating findings that leadership actually acts on. I do both. That is the gap I have spent three years learning to close.</p>
-        <p>At the Iowa Department of Management, I migrated data, reports, and dashboards from a Tyler Technologies legacy system to <strong>GCP BigQuery</strong>, handling source-to-target mapping, ETL execution, JSON/REST API integrations, and validation across <strong>seven state departments</strong>. That project taught me that the hardest part of data work is rarely the analysis. It is knowing what to validate, who to ask, and how to explain what you found.</p>
-        <p>Every project in this portfolio starts with a written business question and ends with a recommendation in plain English. That is by design, not accident.</p>
-        <div class="edu-block">
-          <div class="section-label" style="margin-bottom:0.9rem;">Education</div>
-          <div class="edu-item">
-            <div>
-              <div class="edu-degree">M.S. Business Analytics</div>
-              <div class="edu-school">Iowa State University</div>
-            </div>
-            <div class="edu-year">May 2025</div>
+      <div class="about-text fade-in">
+        <p>
+          I work at the intersection of <strong>technical depth and business fluency</strong> -- writing
+          production SQL pipelines and building ML models in the morning, then translating findings
+          into plain-English recommendations for leadership in the afternoon.
+        </p>
+        <p>
+          At <strong>Benda Infotech</strong>, I build SQL Server and Tableau solutions for banking and
+          financial services clients -- delivering BI frameworks that improve data accessibility
+          by 15% and cut reporting time by 30%.
+        </p>
+        <p>
+          Before that, at the <strong>Iowa Department of Management</strong>, I led the migration of
+          7 state departments from a Tyler Technologies legacy system to GCP BigQuery -- reducing
+          reconciliation errors by 35% and eliminating 4 manual tasks that consumed over 30 hours
+          monthly.
+        </p>
+        <p>
+          My portfolio of 14 projects spans 9 industries -- healthcare, financial services, aviation,
+          food delivery, retail, supply chain, HR analytics, API testing, and government. Not because
+          I built generic exercises, but because every project was grounded in real business problems
+          with real data.
+        </p>
+        <div class="about-quick">
+          <div class="about-quick-item">
+            <span class="about-quick-icon">&#128205;</span>
+            <span>Chicago, IL -- open to hybrid and relocation</span>
           </div>
-          <div class="edu-item">
-            <div>
-              <div class="edu-degree">B.E. Electronics &amp; Telecom Engineering</div>
-              <div class="edu-school">University of Mumbai</div>
-            </div>
-            <div class="edu-year">2021</div>
+          <div class="about-quick-item">
+            <span class="about-quick-icon">&#127891;</span>
+            <span>M.S. Business Analytics -- Iowa State University, May 2025</span>
           </div>
-          <div class="cert-list">
-            <span class="cert-tag">Alteryx Designer Core 85.6%</span>
-            <span class="cert-tag">Bloomberg Market Concepts</span>
-            <span class="cert-tag">Microsoft Power BI Data Analyst</span>
-            <span class="cert-tag">Preparing Data with Excel</span>
+          <div class="about-quick-item">
+            <span class="about-quick-icon">&#128188;</span>
+            <span>Data Analyst at Benda Infotech (since Feb 2026)</span>
+          </div>
+          <div class="about-quick-item">
+            <span class="about-quick-icon">&#128279;</span>
+            <span><a href="https://github.com/aksingh-ops" target="_blank">github.com/aksingh-ops</a></span>
           </div>
         </div>
       </div>
-
-      <div class="about-highlights">
-        <div class="section-label">What I Deliver</div>
-        <div class="highlight-card">
-          <h4>As a Data Analyst</h4>
-          <p>SQL pipelines with CTEs and window functions, Python ML models with SHAP explainability, statistical hypothesis testing with power analysis, time series forecasting, and ETL pipeline design on GCP BigQuery.</p>
+      <div class="fade-in">
+        <div class="about-card">
+          <p class="about-card-title">Certifications</p>
+          <ul class="cert-list">
+            <li>Alteryx Designer Core -- Apr 2026 (85.6%)</li>
+            <li>Bloomberg Market Concepts -- Feb 2026</li>
+            <li>Microsoft Power BI Data Analyst (Coursera)</li>
+            <li>SAP Business Analyst Professional Certificate</li>
+            <li>Claude AI with Google Cloud Vertex AI</li>
+            <li>Preparing Data for Analysis with Microsoft Excel</li>
+          </ul>
         </div>
-        <div class="highlight-card">
-          <h4>As a Business Analyst</h4>
-          <p>Business Requirements Documents written before any code is touched, experiment design with pre-registered hypotheses, Go/No-Go recommendations with three-scenario dollar models, and executive one-pagers leadership can read in two minutes.</p>
-        </div>
-        <div class="highlight-card">
-          <h4>As a BI Engineer</h4>
-          <p>Power BI and Tableau dashboards for executive audiences, Looker-based reporting, Alteryx ETL workflows, and GCP BigQuery warehouse design. Dashboards built to be maintained by the team, not just understood by the person who built them.</p>
-        </div>
-        <div class="highlight-card">
-          <h4>Based in the United States</h4>
-          <p>Open to roles across the U.S. Available to start immediately.</p>
+        <div class="about-card" style="margin-top:1.2rem;">
+          <p class="about-card-title">Education</p>
+          <ul class="cert-list">
+            <li>M.S. Business Analytics -- Iowa State University (May 2025)</li>
+            <li>B.E. Electronics &amp; Telecom Engineering -- University of Mumbai</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -769,76 +494,68 @@ footer a { color: var(--gold); }
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience" class="section">
+<section class="section" id="experience" style="background: var(--navy-mid);">
   <div class="container">
-    <div class="section-label">Work Experience</div>
-    <h2 class="section-title">Where the work<br>actually happened.</h2>
-    <div class="divider"></div>
-    <p class="section-sub">Real enterprise roles, real scale. The metrics below are the same ones that appear across my resume and project work.</p>
+    <div class="fade-in">
+      <p class="section-label">Experience</p>
+      <h2 class="section-title">Analytics that moved the needle</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="exp-timeline fade-in">
 
-    <div class="experience-timeline">
-
-      <div class="exp-card">
+      <div class="exp-item">
         <div class="exp-header">
-          <div class="exp-title">Data Analyst</div>
-          <div class="exp-dates">May 2024 &ndash; December 2025</div>
+          <span class="exp-title">Data Analyst</span>
+          <span class="exp-dates">Feb 2026 -- Present</span>
         </div>
-        <div class="exp-company">Iowa Department of Management &middot; Contract</div>
-        <p class="exp-scope">
-          Worked on Iowa's enterprise BI modernization program, migrating data, tables,
-          reports, and dashboards from a <strong>Tyler Technologies legacy RDBMS</strong>
-          to <strong>GCP BigQuery</strong> across seven state departments. Handled
-          source-to-target data mapping, ETL execution, JSON/REST API integrations,
-          and cross-departmental data validation. Coordinated with 10+ vendors and
-          non-technical state agency stakeholders throughout.
-        </p>
-        <div class="exp-metrics">
-          <span class="exp-metric">35% reconciliation cycle reduction</span>
-          <span class="exp-metric">4 manual tasks automated</span>
-          <span class="exp-metric">25% reporting turnaround improvement</span>
-          <span class="exp-metric">7 state departments migrated</span>
-          <span class="exp-metric">18% efficiency improvement</span>
-          <span class="exp-metric">15% data accuracy improvement</span>
-        </div>
-        <div class="exp-stack">
-          <span class="exp-tag">SQL</span>
-          <span class="exp-tag">GCP BigQuery</span>
-          <span class="exp-tag">Python</span>
-          <span class="exp-tag">REST APIs</span>
-          <span class="exp-tag">JSON</span>
-          <span class="exp-tag">ETL</span>
+        <p class="exp-company">Benda Infotech -- Chicago, IL</p>
+        <ul class="exp-bullets">
+          <li>Build SQL Server and Tableau reporting solutions for banking and financial services clients, improving data accessibility by 15% and reducing reporting time by 30%.</li>
+          <li>Design and deliver 5 analytical frameworks covering data quality, operational KPIs, and portfolio performance monitoring for enterprise clients.</li>
+          <li>Improve data reliability by 20% through validation pipelines and source-to-target reconciliation across multi-system environments.</li>
+          <li>Coordinate with stakeholders across client organizations to translate business requirements into production-ready BI solutions.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">SQL Server</span><span class="exp-tag">Tableau</span>
+          <span class="exp-tag">SSIS</span><span class="exp-tag">SSRS</span>
+          <span class="exp-tag">SAP BW</span><span class="exp-tag">Snowflake</span>
           <span class="exp-tag">Power BI</span>
-          <span class="exp-tag">Looker</span>
-          <span class="exp-tag">Jira</span>
-          <span class="exp-tag">Agile</span>
         </div>
       </div>
 
-      <div class="exp-card">
+      <div class="exp-item">
         <div class="exp-header">
-          <div class="exp-title">Business Analyst / BI Engineer</div>
-          <div class="exp-dates">2021 &ndash; 2023</div>
+          <span class="exp-title">Data Analyst</span>
+          <span class="exp-dates">May 2024 -- Dec 2025</span>
         </div>
-        <div class="exp-company">Bhushan Building Material Supplier &middot; Mumbai, India</div>
-        <p class="exp-scope">
-          Built and maintained BI reporting infrastructure supporting <strong>50,000+
-          monthly transactions</strong>. Designed and delivered four Excel-based
-          executive dashboards covering operational and financial KPIs. Worked
-          directly with business stakeholders to translate reporting requirements
-          into analytical deliverables.
-        </p>
-        <div class="exp-metrics">
-          <span class="exp-metric">50K+ monthly transactions tracked</span>
-          <span class="exp-metric">4 executive dashboards built</span>
-          <span class="exp-metric">20% reporting time reduction</span>
+        <p class="exp-company">Iowa Department of Management -- Des Moines, IA</p>
+        <ul class="exp-bullets">
+          <li>Migrated 7 state departments from Tyler Technologies legacy RDBMS to GCP BigQuery, reducing reconciliation errors by 35% and eliminating 4 manual tasks consuming 30+ hours monthly.</li>
+          <li>Built ETL pipelines and automated reporting workflows with SSIS and SSRS, cutting reporting turnaround by 25% and improving data accuracy by 15%.</li>
+          <li>Coordinated 10+ vendor relationships and cross-agency data governance requirements across the statewide analytics platform migration.</li>
+          <li>Reduced analyst onboarding time by 25% through documentation standards and reusable query templates adopted across all 7 departments.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">GCP BigQuery</span><span class="exp-tag">SSIS</span>
+          <span class="exp-tag">SSRS</span><span class="exp-tag">SSAS</span>
+          <span class="exp-tag">Microsoft Access</span><span class="exp-tag">Power BI</span>
+          <span class="exp-tag">Alteryx</span><span class="exp-tag">Jira</span>
         </div>
-        <div class="exp-stack">
-          <span class="exp-tag">Advanced Excel</span>
-          <span class="exp-tag">Power Query</span>
-          <span class="exp-tag">SQL</span>
-          <span class="exp-tag">Tableau</span>
-          <span class="exp-tag">Data Modeling</span>
-          <span class="exp-tag">Stakeholder Reporting</span>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <span class="exp-title">Business Intelligence Analyst</span>
+          <span class="exp-dates">2021 -- 2023</span>
+        </div>
+        <p class="exp-company">Bhushan Building Material Supplier -- Mumbai, India</p>
+        <ul class="exp-bullets">
+          <li>Designed and maintained 4 executive dashboards tracking 50,000+ monthly transactions, reducing monthly reporting time by 20%.</li>
+          <li>Built inventory and sales analytics pipelines that identified pricing and stock optimization opportunities across product lines.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">SQL</span><span class="exp-tag">Excel</span>
+          <span class="exp-tag">Power BI</span><span class="exp-tag">Data Visualization</span>
         </div>
       </div>
 
@@ -847,395 +564,326 @@ footer a { color: var(--gold); }
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="section">
+<section class="section" id="skills">
   <div class="container">
-    <div class="section-label">Technical Stack</div>
-    <h2 class="section-title">Skills &amp; Tools</h2>
-    <div class="divider"></div>
-    <div class="skills-grid">
+    <div class="fade-in">
+      <p class="section-label">Technical Skills</p>
+      <h2 class="section-title">Tools I use every day</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="skills-grid fade-in">
       <div class="skill-group">
-        <div class="skill-group-icon">🗄️</div>
-        <div class="skill-group-name">Languages &amp; Querying</div>
+        <p class="skill-group-name">SQL and Databases</p>
         <div class="skill-tags">
-          <span class="skill-tag">SQL</span><span class="skill-tag">Python</span>
-          <span class="skill-tag">BigQuery</span><span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">DuckDB</span><span class="skill-tag">Advanced Excel</span>
+          <span class="skill-tag">SQL Server</span><span class="skill-tag">PostgreSQL</span>
+          <span class="skill-tag">GCP BigQuery</span><span class="skill-tag">DuckDB</span>
+          <span class="skill-tag">Snowflake</span><span class="skill-tag">Microsoft Access</span>
+          <span class="skill-tag">Window Functions</span><span class="skill-tag">CTEs</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-icon">📊</div>
-        <div class="skill-group-name">Business Intelligence</div>
+        <p class="skill-group-name">BI and Visualization</p>
         <div class="skill-tags">
-          <span class="skill-tag">Power BI</span><span class="skill-tag">Tableau</span>
-          <span class="skill-tag">Looker</span><span class="skill-tag">Alteryx</span>
-          <span class="skill-tag">DAX</span><span class="skill-tag">Power Query</span>
+          <span class="skill-tag">Tableau</span><span class="skill-tag">Power BI</span>
+          <span class="skill-tag">Looker</span><span class="skill-tag">SSRS</span>
+          <span class="skill-tag">Excel Advanced</span><span class="skill-tag">Power Query</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-icon">☁️</div>
-        <div class="skill-group-name">Cloud &amp; Engineering</div>
+        <p class="skill-group-name">Python and ML</p>
         <div class="skill-tags">
-          <span class="skill-tag">Google Cloud Platform</span>
-          <span class="skill-tag">Microsoft Azure</span>
-          <span class="skill-tag">AWS</span><span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">ETL / ELT</span><span class="skill-tag">JSON</span>
+          <span class="skill-tag">Python</span><span class="skill-tag">XGBoost</span>
+          <span class="skill-tag">SHAP</span><span class="skill-tag">SARIMAX</span>
+          <span class="skill-tag">scikit-learn</span><span class="skill-tag">Pandas</span>
+          <span class="skill-tag">SMOTE</span><span class="skill-tag">statsmodels</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-icon">🤖</div>
-        <div class="skill-group-name">ML &amp; Analytics</div>
+        <p class="skill-group-name">ETL and Data Engineering</p>
         <div class="skill-tags">
-          <span class="skill-tag">XGBoost</span><span class="skill-tag">scikit-learn</span>
-          <span class="skill-tag">SHAP</span><span class="skill-tag">statsmodels</span>
-          <span class="skill-tag">scipy</span><span class="skill-tag">Prophet</span>
-          <span class="skill-tag">ARIMA</span><span class="skill-tag">SMOTE</span>
+          <span class="skill-tag">Alteryx</span><span class="skill-tag">SSIS</span>
+          <span class="skill-tag">SSAS</span><span class="skill-tag">SAP BW</span>
+          <span class="skill-tag">ETL Pipeline Design</span><span class="skill-tag">dbt</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-icon">📋</div>
-        <div class="skill-group-name">BA &amp; Process</div>
+        <p class="skill-group-name">Statistics and Testing</p>
         <div class="skill-tags">
-          <span class="skill-tag">Requirements Docs</span>
-          <span class="skill-tag">A/B Testing</span>
-          <span class="skill-tag">Experiment Design</span>
-          <span class="skill-tag">Jira</span>
-          <span class="skill-tag">Agile / Scrum</span>
-          <span class="skill-tag">Stakeholder Reporting</span>
-        </div>
-      </div>
-      <div class="skill-group">
-        <div class="skill-group-icon">📈</div>
-        <div class="skill-group-name">Statistics</div>
-        <div class="skill-tags">
-          <span class="skill-tag">Hypothesis Testing</span>
-          <span class="skill-tag">Power Analysis</span>
-          <span class="skill-tag">OLS Regression</span>
-          <span class="skill-tag">Time Series</span>
-          <span class="skill-tag">Clustering</span>
+          <span class="skill-tag">Hypothesis Testing</span><span class="skill-tag">Power Analysis</span>
+          <span class="skill-tag">OLS Regression</span><span class="skill-tag">Chi-Square</span>
+          <span class="skill-tag">Logistic Regression</span><span class="skill-tag">A/B Testing</span>
           <span class="skill-tag">Anomaly Detection</span>
         </div>
       </div>
       <div class="skill-group">
-        <div class="skill-group-icon">&lt;/&gt;</div>
-        <div class="skill-group-name">API Testing &amp; Automation</div>
+        <p class="skill-group-name">API Testing and Automation</p>
         <div class="skill-tags">
-          <span class="skill-tag">Postman</span>
-          <span class="skill-tag">Playwright</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">GitHub Actions</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">Newman CLI</span>
+          <span class="skill-tag">Postman</span><span class="skill-tag">Playwright</span>
+          <span class="skill-tag">TypeScript</span><span class="skill-tag">GitHub Actions</span>
+          <span class="skill-tag">REST APIs</span><span class="skill-tag">Newman CLI</span>
         </div>
+      </div>
+    </div>
+
+    <div class="fade-in" style="margin-top:2.5rem;">
+      <p class="section-label" style="margin-bottom:0.5rem;">Industry Coverage</p>
+      <div class="industry-row">
+        <span class="industry-badge" style="background:#1A5276">Healthcare and Pharmacy Analytics</span>
+        <span class="industry-badge" style="background:#6C3483">Financial Services and GBM Analytics</span>
+        <span class="industry-badge" style="background:#27496D">Aviation and Transportation</span>
+        <span class="industry-badge" style="background:#B7950B">Food Delivery and Marketplace</span>
+        <span class="industry-badge" style="background:#0A3161">Retail and E-commerce</span>
+        <span class="industry-badge" style="background:#1a5296">Supply Chain and Operations</span>
+        <span class="industry-badge" style="background:#14532d">HR and People Analytics</span>
+        <span class="industry-badge" style="background:#37474F">Government and Public Sector</span>
+        <span class="industry-badge" style="background:#2C3E50">API Testing and Automation</span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="section">
+<section class="section" id="projects" style="background: var(--navy-mid);">
   <div class="container">
-    <div class="section-label">Portfolio</div>
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="divider"></div>
-    <p class="section-sub" style="margin-bottom:2rem;">Each project starts with a real business question, uses publicly available data, and ends with a measurable outcome. Business requirements are written before any code is touched.</p>
-    <div class="project-filters">
+    <div class="fade-in">
+      <p class="section-label">Portfolio</p>
+      <h2 class="section-title">14 projects across 9 industries</h2>
+      <div class="divider"></div>
+      <p class="section-sub">Each project built end-to-end: business requirements document, SQL pipeline, analysis, and an executive recommendation. Real data or parameters sourced from published industry benchmarks.</p>
+    </div>
+
+    <div class="filter-row fade-in">
       <button class="filter-btn active" data-filter="all">All</button>
       <button class="filter-btn" data-filter="sql">SQL</button>
-      <button class="filter-btn" data-filter="ml">ML &amp; Python</button>
-      <button class="filter-btn" data-filter="ba">BA</button>
+      <button class="filter-btn" data-filter="ml">Machine Learning</button>
+      <button class="filter-btn" data-filter="ba">Business Analyst</button>
+      <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+      <button class="filter-btn" data-filter="finance">Finance</button>
+      <button class="filter-btn" data-filter="api">API Testing</button>
       <button class="filter-btn" data-filter="excel">Excel</button>
-          <button class="filter-btn" data-filter="api">API Testing</button>
-          <button class="filter-btn" data-filter="testing">Automation</button>
     </div>
-    <div class="projects-grid">
+
+    <div class="projects-grid fade-in">
 
       <div class="project-card" data-tags="sql ml finance">
         <div class="project-domain">Financial Services / GBM Operations Analytics</div>
         <h3 class="project-title">GBM Settlement Intelligence</h3>
-        <p class="project-desc">End-to-end trade settlement fail rate monitoring, counterparty risk ranking, and SLO breach prediction for GBM operations. Built on SEC Regulation SHO Rules 203 and 204 with 8 published industry references. SARIMAX forecasts daily fail volumes 30 days ahead. XGBoost predicts which trades will breach the T+4 mandatory close-out deadline before it happens.</p>
+        <p class="project-desc">End-to-end trade settlement fail rate monitoring, counterparty risk ranking, and SLO breach prediction for GBM operations. Built on SEC Regulation SHO Rules 203 and 204 with 8 published industry references. SARIMAX forecasts daily fail volumes 30 days ahead.</p>
         <div class="project-metric">XGBoost AUC 0.750 &middot; SARIMAX MAPE 11.51% &middot; 10,456 records</div>
         <div class="project-stack">
           <span class="stack-tag">DuckDB SQL</span><span class="stack-tag">Python</span>
           <span class="stack-tag">XGBoost</span><span class="stack-tag">SARIMAX</span>
           <span class="stack-tag">SHAP</span><span class="stack-tag">SEC FTD Data</span>
         </div>
-        <a href="https://github.com/aksingh-ops/gbm-settlement-intelligence" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/gbm-settlement-intelligence" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
       <div class="project-card" data-tags="sql ml healthcare">
         <div class="project-domain">Healthcare / Claims Analytics</div>
         <h3 class="project-title">Healthcare Claims Cohort and Care Management Outcome Evaluation</h3>
-        <p class="project-desc">End-to-end analytical framework evaluating 30-day inpatient readmission drivers and quantifying the clinical and financial impact of Care Management enrollment. SQL cohort construction with LEFT JOIN date-range window, chi-square hypothesis testing, and multivariate logistic regression on a 5,000-patient CMS SynPUF-modeled claims dataset.</p>
+        <p class="project-desc">30-day hospital readmission cohort analysis on 5,000-patient CMS SynPUF-modeled claims dataset. SQL cohort construction with LEFT JOIN date-range window, chi-square testing, and multivariate logistic regression to evaluate Care Management program impact.</p>
         <div class="project-metric">OR 0.446 &middot; ARR 12.6 pp &middot; $14.4M projected annual savings</div>
         <div class="project-stack">
           <span class="stack-tag">Python</span><span class="stack-tag">SQL</span>
           <span class="stack-tag">Chi-Square</span><span class="stack-tag">Logistic Regression</span>
           <span class="stack-tag">Statsmodels</span><span class="stack-tag">CMS SynPUF</span>
         </div>
-        <a href="https://github.com/aksingh-ops/healthcare-claims-cohort-evaluation" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/healthcare-claims-cohort-evaluation" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
       <div class="project-card" data-tags="api testing automation">
         <div class="project-domain">API Testing and Automation</div>
         <h3 class="project-title">pharma-fx-api-test-suite</h3>
-        <p class="project-desc">Automated API test suite for the FDA Drug API and Frankfurter FX API using Playwright and TypeScript. 38 tests covering status codes, schema validation, error handling, and data consistency. Postman collection with JavaScript assertions. GitHub Actions CI/CD pipeline runs all tests on every push to main.</p>
+        <p class="project-desc">Automated API test suite for the FDA Drug API and Frankfurter FX API. 38 tests covering status codes, schema validation, response time, error handling, and data consistency. Postman collection with JavaScript assertions. GitHub Actions CI/CD runs all tests on every push.</p>
         <div class="project-metric">38 automated tests &middot; 2 APIs &middot; GitHub Actions CI/CD</div>
         <div class="project-stack">
           <span class="stack-tag">Playwright</span><span class="stack-tag">TypeScript</span>
           <span class="stack-tag">Postman</span><span class="stack-tag">Newman CLI</span>
           <span class="stack-tag">GitHub Actions</span><span class="stack-tag">REST APIs</span>
         </div>
-        <a href="https://github.com/aksingh-ops/pharma-fx-api-test-suite" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/pharma-fx-api-test-suite" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
       <div class="project-card" data-tags="sql ba healthcare">
         <div class="project-domain">Healthcare / Pharmacy Analytics</div>
         <h3 class="project-title">Medicare Part D Adherence Gap and Star Ratings Revenue-Risk Analysis</h3>
-        <p class="project-desc">SQL pipeline identifying where Medicare Advantage plans are losing CMS quality bonus payments due to medication adherence gaps across three triple-weighted Star Rating measures. 40.6 million beneficiaries analyzed across all 51 states.</p>
-        <div class="project-metric">$562.4M revenue at risk identified</div>
+        <p class="project-desc">$562.4M in CMS quality bonus revenue at risk identified across three triple-weighted Star Rating adherence measures. Analyzed 40.6M beneficiary records to rank prescriber specialties and produce four outreach recommendations with break-even thresholds.</p>
+        <div class="project-metric">$562.4M revenue at risk &middot; 46/51 states below threshold</div>
         <div class="project-stack">
           <span class="stack-tag">DuckDB SQL</span><span class="stack-tag">Python</span>
-          <span class="stack-tag">CMS Part D Data</span><span class="stack-tag">BRD</span>
+          <span class="stack-tag">CMS Part D Data</span><span class="stack-tag">Revenue Modeling</span>
         </div>
-        <a href="https://github.com/aksingh-ops/medicare-partd-adherence-gap" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/medicare-partd-adherence-gap" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
-      <div class="project-card" data-tags="sql ml ba food">
-        <div class="project-domain">Food Delivery / Marketplace</div>
+      <div class="project-card" data-tags="sql ml ba">
+        <div class="project-domain">Food Delivery / Marketplace Analytics</div>
         <h3 class="project-title">Food Delivery Promo Discount A/B Test</h3>
-        <p class="project-desc">End-to-end A/B test measuring whether a 20% first-order discount actually drives repeat customers or just attracts one-time deal seekers. 50,000 users tracked over 90 days. The guardrail was breached before the primary metric even ran.</p>
-        <div class="project-metric">$9.05M annual loss identified at 100K users/month</div>
+        <p class="project-desc">50,000-user experiment evaluating a 20% promotional discount. No significant reorder lift (p=0.52), but guardrail breached: $7.42 net revenue loss per user. Go/No-Go recommendation with three alternative promo designs and $9.05M annual risk quantification.</p>
+        <div class="project-metric">$9.05M annual risk flagged &middot; p=0.52 no lift</div>
         <div class="project-stack">
           <span class="stack-tag">Python</span><span class="stack-tag">DuckDB SQL</span>
-          <span class="stack-tag">scipy</span><span class="stack-tag">statsmodels</span>
+          <span class="stack-tag">scipy</span><span class="stack-tag">A/B Testing</span>
+          <span class="stack-tag">Power Analysis</span>
         </div>
-        <a href="https://github.com/aksingh-ops/food-delivery-promo-ab-test" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/food-delivery-promo-ab-test" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
-      <div class="project-card" data-tags="ml aviation">
+      <div class="project-card" data-tags="ml sql">
         <div class="project-domain">Aviation / Transportation</div>
-        <h3 class="project-title">AA Crew Absence Prediction &amp; Reserve Optimization</h3>
-        <p class="project-desc">ML system predicting American Airlines crew sick-calls on 820,876 real BTS flight records. Original Schedule Stress Score feature ranked 4th of 35 features by SHAP importance. Includes a reserve cost optimization layer with hub-level dollar estimates.</p>
-        <div class="project-metric">$1.3M estimated annual reserve savings</div>
+        <h3 class="project-title">AA Crew Absence Prediction and Reserve Optimization</h3>
+        <p class="project-desc">XGBoost model predicting crew sick-calls on 820,876 BTS flight records. AUC 0.87, recall 0.91. Original Schedule Stress Score feature ranked 4th of 35 by SHAP. $1.3M estimated annual reserve savings at DFW and CLT hubs.</p>
+        <div class="project-metric">AUC 0.87 &middot; $1.3M savings estimate &middot; 820K records</div>
         <div class="project-stack">
           <span class="stack-tag">Python</span><span class="stack-tag">XGBoost</span>
-          <span class="stack-tag">BTS Data</span><span class="stack-tag">SHAP</span>
+          <span class="stack-tag">SHAP</span><span class="stack-tag">SMOTE</span>
+          <span class="stack-tag">BTS Data</span>
         </div>
-        <a href="https://github.com/aksingh-ops/AA-Crew-Absence-Prediction-Reserve-Optimization" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/AA-Crew-Absence-Prediction-Reserve-Optimization" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
-      <div class="project-card" data-tags="excel ba retail">
+      <div class="project-card" data-tags="excel ba">
         <div class="project-domain">Retail / E-commerce</div>
         <h3 class="project-title">Best Buy Marketplace Product Data Quality Audit</h3>
-        <p class="project-desc">Six-sheet Excel audit pipeline for 1,040 SKUs across eight third-party sellers. Automated validation for seven issue types and a weighted seller quality scorecard. Built against Best Buy Marketplace Standard Terms (April 2025) and PDM portal documentation.</p>
-        <div class="project-metric">1,040 SKUs audited across 8 sellers</div>
+        <p class="project-desc">Six-sheet Excel audit pipeline for 1,040 SKUs. Automated validation for 7 issue types with LAMBDA functions. Weighted seller quality scorecard. Grounded in Best Buy Marketplace Standard Terms (April 2025).</p>
+        <div class="project-metric">1,040 SKUs audited &middot; 7 validation types</div>
         <div class="project-stack">
           <span class="stack-tag">Excel</span><span class="stack-tag">Power Query</span>
-          <span class="stack-tag">LAMBDA</span>
+          <span class="stack-tag">LAMBDA</span><span class="stack-tag">Data Quality</span>
         </div>
-        <a href="https://github.com/aksingh-ops/best-buy-marketplace-dq-audit" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/best-buy-marketplace-dq-audit" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
-      <div class="project-card" data-tags="excel retail">
+      <div class="project-card" data-tags="excel ba">
         <div class="project-domain">Retail / Supply Chain</div>
         <h3 class="project-title">Tariff Shock Inventory Stress-Testing</h3>
-        <p class="project-desc">120 SKUs stress-tested across four tariff scenarios from 0% to 200%. Break-even reprice and reorder urgency calculated per SKU. Anchored to FRED electronics inventory-to-sales ratio at 1.61 as of December 2025.</p>
-        <div class="project-metric">120 SKUs across 4 tariff scenarios</div>
+        <p class="project-desc">120 SKUs stress-tested across 4 tariff scenarios (0% to 200%). Break-even reprice and reorder urgency surfaced per SKU. Anchored to FRED electronics inventory-to-sales ratio for macroeconomic context.</p>
+        <div class="project-metric">120 SKUs &middot; 4 tariff scenarios &middot; FRED data</div>
         <div class="project-stack">
-          <span class="stack-tag">Excel</span><span class="stack-tag">FRED Data</span>
-          <span class="stack-tag">SQL-style Analysis</span>
+          <span class="stack-tag">Excel</span><span class="stack-tag">Scenario Analysis</span>
+          <span class="stack-tag">FRED Data</span><span class="stack-tag">Supply Chain</span>
         </div>
-        <a href="https://github.com/aksingh-ops/tariff-inventory-stress-testing" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/tariff-inventory-stress-testing" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
-      <div class="project-card" data-tags="ml ba hr">
-        <div class="project-domain">HR &amp; People Analytics</div>
+      <div class="project-card" data-tags="ml sql ba">
+        <div class="project-domain">HR and People Analytics</div>
         <h3 class="project-title">Pay Equity Anomaly Detection Pipeline</h3>
-        <p class="project-desc">Automated Alteryx ETL joining three HR source systems with zero manual steps. OLS regression on 950 employees detected a controlled gender pay gap at p=0.0005 and caught 4 of 5 injected pay anomalies, including a Finance VP cohort of only 15 people.</p>
-        <div class="project-metric">R-squared 0.9325 &middot; Gap detected at p=0.0005</div>
+        <p class="project-desc">OLS regression controlling for role, level, and tenure detects pay gaps with R-squared 0.9325. Controlled gender gap 2.52% (p=0.0005). Detected 4 of 5 injected pay gaps including a Finance VP cohort of only 15 employees.</p>
+        <div class="project-metric">R-squared 0.9325 &middot; 2.52% controlled gap &middot; p=0.0005</div>
         <div class="project-stack">
           <span class="stack-tag">Python</span><span class="stack-tag">Alteryx ETL</span>
           <span class="stack-tag">OLS</span><span class="stack-tag">Statsmodels</span>
         </div>
-        <a href="https://github.com/aksingh-ops/pay-equity-anomaly-detection" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/pay-equity-anomaly-detection" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
-      <div class="project-card" data-tags="ml hr">
-        <div class="project-domain">HR &amp; People Analytics</div>
+      <div class="project-card" data-tags="ml sql">
+        <div class="project-domain">HR and People Analytics</div>
         <h3 class="project-title">Employee Attrition Risk Scoring</h3>
-        <p class="project-desc">Individual-level 90-day attrition prediction on 1,470 IBM HR records. 5.2:1 class imbalance resolved with SMOTE. High-risk tier validated at 41.7% actual attrition versus 8.1% in the low-risk tier. SHAP surfaced top drivers per employee.</p>
-        <div class="project-metric">AUC 0.748 &middot; High-risk tier 41.7% attrition rate</div>
+        <p class="project-desc">Random Forest with SMOTE on 1,470 IBM HR records. AUC 0.748. High-risk tier validated at 41.7% actual attrition vs 8.1% Low-risk tier. SHAP TreeExplainer surfaces top drivers per employee for targeted retention intervention.</p>
+        <div class="project-metric">AUC 0.748 &middot; 41.7% high-risk validation</div>
         <div class="project-stack">
           <span class="stack-tag">Python</span><span class="stack-tag">Random Forest</span>
           <span class="stack-tag">SHAP</span><span class="stack-tag">SMOTE</span>
+          <span class="stack-tag">IBM HR Data</span>
         </div>
-        <a href="https://github.com/aksingh-ops/employee-attrition-risk-scoring" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
-      </div>
-
-      <div class="project-card" data-tags="ml fintech">
-        <div class="project-domain">FinTech &amp; Platform Operations</div>
-        <h3 class="project-title">Operational SLO Monitoring Dashboard</h3>
-        <p class="project-desc">Three-method anomaly detection (Z-score, CUSUM, SARIMAX) monitoring 140,544 metric readings across a four-layer GBM financial platform at 15-minute intervals. Time-aware thresholds eliminated 29% of false alarms that a static threshold would have triggered.</p>
-        <div class="project-metric">8 of 8 injected failures detected &middot; MAPE 0.12%</div>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">Z-score</span>
-          <span class="stack-tag">CUSUM</span><span class="stack-tag">SARIMAX</span>
-        </div>
-        <a href="https://github.com/aksingh-ops/slo-monitoring-dashboard" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/employee-attrition-risk-scoring" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
       <div class="project-card" data-tags="ml sql finance">
-        <div class="project-domain">Financial Services &amp; Credit</div>
+        <div class="project-domain">FinTech / Platform Operations</div>
+        <h3 class="project-title">Operational SLO Monitoring Dashboard</h3>
+        <p class="project-desc">100% detection of 8 injected failure events with 29% false alarm reduction. Z-score plus CUSUM anomaly detection on 140,544 metric readings. SARIMAX MAPE 0.12% on a 4-layer GBM financial platform.</p>
+        <div class="project-metric">100% detection &middot; 29% false alarm reduction &middot; MAPE 0.12%</div>
+        <div class="project-stack">
+          <span class="stack-tag">Python</span><span class="stack-tag">Z-score</span>
+          <span class="stack-tag">CUSUM</span><span class="stack-tag">SARIMAX</span>
+          <span class="stack-tag">Anomaly Detection</span>
+        </div>
+        <a href="https://github.com/aksingh-ops/slo-monitoring-dashboard" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
+      </div>
+
+      <div class="project-card" data-tags="sql ml finance">
+        <div class="project-domain">Financial Services / Credit Analytics</div>
         <h3 class="project-title">Loan Portfolio Health Monitoring</h3>
-        <p class="project-desc">End-to-end credit portfolio surveillance with an early warning system that surfaces deteriorating borrower cohorts before they reach charge-off. Tracks delinquency trends, concentration risk, and portfolio migration with a Power BI executive dashboard.</p>
-        <div class="project-metric">End-to-end credit surveillance pipeline</div>
+        <p class="project-desc">End-to-end credit portfolio surveillance system tracking delinquency trends, concentration risk, and portfolio migration. Executive Power BI dashboard with segment breakdowns for operations leadership.</p>
+        <div class="project-metric">Credit risk surveillance &middot; Power BI executive dashboard</div>
         <div class="project-stack">
           <span class="stack-tag">Python</span><span class="stack-tag">SQL</span>
-          <span class="stack-tag">Power BI</span>
+          <span class="stack-tag">Power BI</span><span class="stack-tag">Credit Analytics</span>
         </div>
-        <a href="https://github.com/aksingh-ops/loan-portfolio-health-monitoring" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/loan-portfolio-health-monitoring" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
       <div class="project-card" data-tags="ml">
         <div class="project-domain">Machine Learning / Time Series</div>
         <h3 class="project-title">IMDB and AirPassengers ML Analytics</h3>
-        <p class="project-desc">Five-model regression pipeline, five-model classification comparison, three clustering techniques (Agglomerative, DBSCAN, Spectral), and time series forecasting comparing ARIMA, Prophet, and Exponential Smoothing side by side.</p>
-        <div class="project-metric">XGBoost RMSE 0.85 &middot; ES RMSE 16.98</div>
+        <p class="project-desc">5-model regression (XGBoost RMSE 0.85), 5-model classification (Gradient Boosting accuracy 0.39), 3 clustering techniques, and 4 time series forecasting models including Exponential Smoothing (RMSE 16.98) on AirPassengers dataset.</p>
+        <div class="project-metric">XGBoost RMSE 0.85 &middot; 5 models compared</div>
         <div class="project-stack">
-          <span class="stack-tag">Python</span><span class="stack-tag">scikit-learn</span>
-          <span class="stack-tag">XGBoost</span><span class="stack-tag">Prophet</span>
+          <span class="stack-tag">Python</span><span class="stack-tag">XGBoost</span>
+          <span class="stack-tag">scikit-learn</span><span class="stack-tag">Prophet</span>
+          <span class="stack-tag">statsmodels</span>
         </div>
-        <a href="https://github.com/aksingh-ops/imdb-airpassengers-ml-analytics" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/imdb-airpassengers-ml-analytics" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
       <div class="project-card" data-tags="ml sql">
         <div class="project-domain">Graph Analytics / NLP / RecSys</div>
-        <h3 class="project-title">Network Analysis, Sentiment Analytics &amp; Recommender Systems</h3>
-        <p class="project-desc">PageRank and HITS on a 289K-edge social network. Institutional holders bipartite graph for 20 tickers via Yahoo Finance. Dual sentiment ranking with TextBlob and VADER. SVD collaborative filtering on a 75.5% sparse movie ratings matrix.</p>
-        <div class="project-metric">SVD RMSE 1.04 &middot; 289K-edge network analyzed</div>
+        <h3 class="project-title">Network Analysis, Sentiment Analytics and Recommender Systems</h3>
+        <p class="project-desc">PageRank and HITS on 289K-edge social graph. Institutional holders bipartite network for 20 tickers. Dual sentiment ranking (TextBlob and VADER). SVD collaborative filtering RMSE 1.04 on 75.5% sparse utility matrix.</p>
+        <div class="project-metric">289K edges &middot; SVD RMSE 1.04</div>
         <div class="project-stack">
           <span class="stack-tag">Python</span><span class="stack-tag">NetworkX</span>
-          <span class="stack-tag">NLTK</span><span class="stack-tag">SVD</span>
+          <span class="stack-tag">TextBlob</span><span class="stack-tag">NLTK</span>
+          <span class="stack-tag">SVD</span><span class="stack-tag">yfinance</span>
         </div>
-        <a href="https://github.com/aksingh-ops/network-sentiment-recommender-analytics" target="_blank" class="project-link">
-          View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
-        </a>
+        <a href="https://github.com/aksingh-ops/network-sentiment-recommender-analytics" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="13" height="13"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- IMPACT -->
-<section id="impact" class="section">
-  <div class="container">
-    <div class="section-label">Professional Impact</div>
-    <h2 class="section-title">Numbers That Actually Moved</h2>
-    <div class="divider"></div>
-    <p class="section-sub">From enterprise government analytics at the Iowa Department of Management to portfolio projects across nine industries. Every number below is sourced and verified.</p>
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <span class="metric-value">35%</span>
-        <span class="metric-label">Reconciliation cycle reduction at Iowa DOM</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">4</span>
-        <span class="metric-label">Manual tasks eliminated through automation</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">25%</span>
-        <span class="metric-label">Reporting turnaround improvement</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">18%</span>
-        <span class="metric-label">Operational efficiency improvement</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">15%</span>
-        <span class="metric-label">Data accuracy improvement</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">10+</span>
-        <span class="metric-label">Vendors and stakeholders coordinated</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">7</span>
-        <span class="metric-label">State departments migrated to GCP BigQuery</span>
-      </div>
-      <div class="metric-card">
-        <span class="metric-value">$562M</span>
-        <span class="metric-label">Revenue at risk identified in Medicare Part D analysis</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- INDUSTRIES -->
-<section id="industries" class="section">
-  <div class="container">
-    <div class="section-label">Industry Coverage</div>
-    <h2 class="section-title">Nine industries.<br>Day one ready.</h2>
-    <div class="divider"></div>
-    <p class="section-sub">Every project in this portfolio uses real data from a real industry context. That means less ramp-up time and faster contribution when it counts.</p>
-    <div class="industry-grid">
-      <div class="industry-pill"><span>🏥</span> Healthcare &amp; Pharmacy Analytics</div>
-      <div class="industry-pill"><span>🛵</span> Food Delivery &amp; Marketplace</div>
-      <div class="industry-pill"><span>✈️</span> Aviation &amp; Transportation</div>
-      <div class="industry-pill"><span>🛍️</span> Retail &amp; E-commerce</div>
-      <div class="industry-pill"><span>📦</span> Supply Chain &amp; Operations</div>
-      <div class="industry-pill"><span>💳</span> Financial Services &amp; Credit</div>
-      <div class="industry-pill"><span>👥</span> HR &amp; People Analytics</div>
-      <div class="industry-pill"><span>💻</span> FinTech &amp; Platform Operations</div>
-      <div class="industry-pill"><span>🏛️</span> Government &amp; Public Sector</div>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section">
+<section class="section" id="contact">
   <div class="container">
-    <div class="contact-inner">
-      <div class="section-label">Get in Touch</div>
-      <h2 class="section-title">Looking for someone who can do both?</h2>
+    <div class="fade-in">
+      <p class="section-label">Contact</p>
+      <h2 class="section-title">Let's connect</h2>
       <div class="divider"></div>
-      <p class="section-sub">
-        Most teams need someone who can write the SQL and explain what it means. If that is the gap you are trying to fill, I would like to hear from you.
-      </p>
-      <div class="contact-links">
-        <a href="https://www.linkedin.com/in/akash-bhupesh-singh/" target="_blank" class="contact-chip">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          Connect on LinkedIn
-        </a>
-        <a href="https://github.com/aksingh-ops" target="_blank" class="contact-chip">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          Browse the Work
-        </a>
+    </div>
+    <div class="contact-grid fade-in">
+      <div>
+        <p class="section-sub" style="margin-bottom:2rem;">
+          Actively seeking Data Analyst and Business Analyst roles across the US.
+          Open to financial services, healthcare, aviation, and technology domains.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:singh0811akash@gmail.com" class="contact-link">
+            <span class="contact-icon">&#9993;</span>
+            <span>singh0811akash@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/akash-bhupesh-singh/" target="_blank" class="contact-link">
+            <span class="contact-icon">&#128101;</span>
+            <span>linkedin.com/in/akash-bhupesh-singh</span>
+          </a>
+          <a href="https://github.com/aksingh-ops" target="_blank" class="contact-link">
+            <span class="contact-icon">&#128190;</span>
+            <span>github.com/aksingh-ops</span>
+          </a>
+          <a href="https://aksingh-ops.github.io" target="_blank" class="contact-link">
+            <span class="contact-icon">&#127760;</span>
+            <span>aksingh-ops.github.io</span>
+          </a>
+        </div>
+      </div>
+      <div class="contact-card">
+        <p class="about-card-title">What I am looking for</p>
+        <p>Data Analyst, Business Analyst, or Analytics Engineer roles where analytical output directly influences business decisions. Particularly interested in financial services, healthcare analytics, and operations analytics environments.</p>
+        <p>Available for hybrid or on-site positions. Open to relocation.</p>
+        <a href="mailto:singh0811akash@gmail.com" class="btn-primary" style="display:inline-block;margin-top:0.5rem;">Send a Message</a>
       </div>
     </div>
   </div>
@@ -1243,68 +891,48 @@ footer a { color: var(--gold); }
 
 <!-- FOOTER -->
 <footer>
-  <p>
-    &copy; 2026 Akash Singh &middot;
-    <a href="https://github.com/aksingh-ops" target="_blank">github.com/aksingh-ops</a>
-    &middot; Built with HTML, CSS, and JavaScript &middot; Hosted on GitHub Pages
-  </p>
+  <div class="container">
+    <p>Built by Akash Singh &middot; Chicago, IL &middot; 2026</p>
+    <p style="margin-top:0.4rem;">
+      <a href="https://github.com/aksingh-ops" target="_blank">GitHub</a> &nbsp;&middot;&nbsp;
+      <a href="https://www.linkedin.com/in/akash-bhupesh-singh/" target="_blank">LinkedIn</a> &nbsp;&middot;&nbsp;
+      <a href="mailto:singh0811akash@gmail.com">Email</a>
+    </p>
+  </div>
 </footer>
 
 <script>
-const impacts = [
-  { value: 'AUC 0.750', label: 'SLO breach prediction model accuracy<br>GBM Settlement Intelligence -- XGBoost on SEC FTD data' },
-  { value: 'OR 0.446',  label: '55% reduction in readmission odds<br>Healthcare Claims Cohort -- Care Management Outcome Evaluation' },
-  { value: '38 Tests',  label: 'Automated API tests passing via CI/CD<br>pharma-fx-api-test-suite -- Playwright + TypeScript' },
-  { value: '$562M',    label: 'Quality bonus revenue at risk identified<br>Medicare Part D Adherence Gap Analysis' },
-  { value: '$1.3M',    label: 'Estimated annual reserve savings<br>AA Crew Absence Prediction' },
-  { value: '$9.05M',   label: 'Annual margin loss from flat 20% promo<br>Food Delivery A/B Test' },
-  { value: 'AUC 0.87', label: 'Crew absence prediction model accuracy<br>AA Crew Project' },
-  { value: '0.9325',   label: 'R-squared on pay equity OLS regression<br>Pay Equity Anomaly Detection' },
-  { value: '100%',     label: '8 of 8 injected failures detected<br>Operational SLO Monitoring' },
-];
-let idx = 0;
-const valEl = document.getElementById('counter-val');
-const lblEl = document.getElementById('counter-lbl');
-
-function cycleImpact() {
-  valEl.style.opacity = '0';
-  lblEl.style.opacity = '0';
-  setTimeout(() => {
-    idx = (idx + 1) % impacts.length;
-    valEl.textContent = impacts[idx].value;
-    lblEl.innerHTML   = impacts[idx].label;
-    valEl.style.opacity = '1';
-    lblEl.style.opacity = '1';
-  }, 280);
+// Theme toggle
+function toggleTheme() {
+  const body = document.body;
+  const btn = document.querySelector('.theme-toggle');
+  if (body.getAttribute('data-theme') === 'light') {
+    body.removeAttribute('data-theme');
+    btn.textContent = 'Light';
+  } else {
+    body.setAttribute('data-theme', 'light');
+    btn.textContent = 'Dark';
+  }
 }
-setInterval(cycleImpact, 3500);
 
-const filterBtns = document.querySelectorAll('.filter-btn');
-const cards = document.querySelectorAll('.project-card');
-filterBtns.forEach(btn => {
+// Project filter
+document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const f = btn.dataset.filter;
-    cards.forEach(card => {
-      const t = card.dataset.tags || '';
-      card.style.display = (f === 'all' || t.includes(f)) ? 'flex' : 'none';
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.project-card').forEach(card => {
+      const tags = card.dataset.tags || '';
+      card.style.display = (filter === 'all' || tags.includes(filter)) ? '' : 'none';
     });
   });
 });
 
-const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav-links a');
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navLinks.forEach(l => {
-        l.style.color = l.getAttribute('href') === '#' + e.target.id ? 'var(--gold)' : '';
-      });
-    }
-  });
-}, { rootMargin: '-40% 0px -55% 0px' });
-sections.forEach(s => obs.observe(s));
+// Fade-in on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
