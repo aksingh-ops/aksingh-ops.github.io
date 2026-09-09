@@ -93,7 +93,7 @@ nav{position:fixed;top:0;width:100%;z-index:100;background:rgba(10,22,40,.93);ba
 @keyframes ticker{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
 
 /* ABOUT */
-.about-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3.5rem;align-items:start}
+.about-grid{display:grid;grid-template-columns:1fr;max-width:720px;gap:3.5rem;align-items:start}
 .about-text p{color:var(--white-dim);margin-bottom:1rem;line-height:1.8}
 .about-text strong{color:var(--white)}
 /* Cert card only &mdash; no education repeat, no quick-links */
@@ -215,7 +215,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
       <p class="hero-role">Data Analyst &amp; Business Analyst</p>
       <p class="hero-intro">
         I turn raw data into the moment a leader says <em style="color:var(--white);font-style:italic">"now I know what to do."</em>
-        SQL pipelines, statistical modeling, and executive insights &mdash; built completely,
+        SQL pipelines, statistical modeling, and executive insights. Built completely,
         documented thoroughly, and grounded in <strong>real business impact</strong>.
       </p>
       <p class="hero-seeking">Looking for the right team where data shapes how decisions get made.</p>
@@ -241,7 +241,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
   </div>
 </section>
 
-<!-- TICKER &mdash; slower, linked, larger text -->
+<!-- TICKER: slower, linked, larger text -->
 <div class="ticker-bar">
   <div class="ticker-track">
     <a href="https://github.com/aksingh-ops/gbm-settlement-intelligence" target="_blank" class="ticker-item">
@@ -312,7 +312,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
   </div>
 </div>
 
-<!-- ABOUT &mdash; 3 paragraphs + Certifications card only, no repeated quick-links -->
+<!-- ABOUT: 3 paragraphs + Certifications card only, no repeated quick-links -->
 <section class="section" id="about">
   <div class="container">
     <div class="fade-in">
@@ -323,43 +323,29 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
     <div class="about-grid">
       <div class="about-text fade-in">
         <p>
-          I am a data analyst with a background in both technical work and business thinking.
-          I started building BI reports and dashboards early in my career, and over time I got
-          more interested in the decisions behind the data, not just the numbers themselves.
+          What genuinely excites me about data is not the technical side, though I enjoy that too.
+          It is watching an organization shift how it operates because someone finally had the right
+          information at the right time. That connection between a well built analysis and a smarter
+          business decision is what I care about most in this work.
         </p>
         <p>
-          My experience spans government, financial services, healthcare, and a few other industries.
-          I have worked on migrations, built SQL pipelines, trained predictive models, and designed
-          reporting systems that teams actually use day to day. I enjoy the full cycle, from a
-          messy dataset to a recommendation someone can act on.
+          My background covers a few different contexts. I have worked on large scale government
+          data migrations, built BI reporting for financial services clients, and designed
+          predictive models across industries from healthcare to aviation. Each one taught me
+          something different about how organizations actually use data versus how they think they use it.
         </p>
         <p>
-          Outside of my day job, I keep building. The projects on this site cover fourteen different
-          business problems across nine industries. Each one starts with a real question and ends
-          with a clear answer backed by data.
+          The projects on this site are the clearest picture of how I think. Fourteen problems,
+          nine industries, each one worked from scratch with a real question and a documented answer.
+          That is how I approach work too.
         </p>
       </div>
-      <div class="fade-in">
-        <div class="about-card">
-          <p class="about-card-title">Education</p>
-          <ul class="cert-list">
-            <li>M.S. Business Analytics, Iowa State University (May 2025)</li>
-            <li>B.E. Electronics and Telecom Engineering, University of Mumbai</li>
-          </ul>
-        </div>
-        <div class="about-card" style="margin-top:1.1rem">
-          <p class="about-card-title">Currently</p>
-          <ul class="cert-list">
-            <li>Data Analyst at Benda Infotech, building BI solutions for financial services clients</li>
-            <li>Open to new roles where data shapes how decisions get made</li>
-          </ul>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE &mdash; collapsible + / - -->
+<!-- EXPERIENCE: collapsible + / - -->
 <section class="section" id="experience" style="background:var(--navy-mid)">
   <div class="container">
     <div class="fade-in">
@@ -373,10 +359,10 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
         <button class="exp-header-btn" onclick="toggleExp(this)">
           <div class="exp-header-left">
             <span class="exp-title">Data Analyst</span>
-            <span class="exp-company">Benda Infotech &middot; United States</span>
+            <span class="exp-company">Benda Infotech &middot; Chicago, IL</span>
           </div>
           <div class="exp-header-right">
-            <span class="exp-dates">Feb 2026 &mdash; Present</span>
+            <span class="exp-dates">Feb 2026 to Present</span>
             <div class="exp-toggle">+</div>
           </div>
         </button>
@@ -403,7 +389,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
             <span class="exp-company">Iowa Department of Management &middot; Des Moines, IA</span>
           </div>
           <div class="exp-header-right">
-            <span class="exp-dates">May 2024 &mdash; Dec 2025</span>
+            <span class="exp-dates">May 2024 to Dec 2025</span>
             <div class="exp-toggle">+</div>
           </div>
         </button>
@@ -430,7 +416,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
             <span class="exp-company">Bhushan Building Material Supplier &middot; Mumbai, India</span>
           </div>
           <div class="exp-header-right">
-            <span class="exp-dates">2021 &mdash; 2023</span>
+            <span class="exp-dates">2021 to 2023</span>
             <div class="exp-toggle">+</div>
           </div>
         </button>
@@ -450,7 +436,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
   </div>
 </section>
 
-<!-- SKILLS &mdash; each tag links to best matching repo -->
+<!-- SKILLS: each tag links to best matching repo -->
 <section class="section" id="skills">
   <div class="container">
     <div class="fade-in">
@@ -560,7 +546,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
   </div>
 </section>
 
-<!-- PROJECTS &mdash; collapsed cards, click + to expand -->
+<!-- PROJECTS: collapsed cards, click + to expand -->
 <section class="section" id="projects" style="background:var(--navy-mid)">
   <div class="container">
     <div class="fade-in">
@@ -867,7 +853,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
     </div>
     <div class="contact-grid fade-in">
       <div>
-        <p class="section-sub" style="margin-bottom:1.8rem">Open to Data Analyst and Business Analyst roles across the United States.</p>
+        <p class="section-sub" style="margin-bottom:1.8rem">Based in the United States, open to opportunities across any industry.</p>
         <div class="contact-links">
           <a href="mailto:singh0811akash@gmail.com" class="contact-link">
             <span class="contact-icon">&#9993;</span>singh0811akash@gmail.com
@@ -882,9 +868,9 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
         </div>
       </div>
       <div class="contact-card">
-        <p class="about-card-title" style="font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-bottom:1rem">What I am looking for</p>
-        <p>A role where the analytical work actually matters. Where someone looks at what I built, understands what it means, and uses it to make a better decision.</p>
-        <p>I work well in environments that value precision and clarity. If that sounds like your team, I would love to connect.</p>
+        <p class="about-card-title" style="font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;color:var(--gold);margin-bottom:1rem">Let's Talk</p>
+        <p>Good analytical work does not just answer the question asked. It surfaces the question that should have been asked. That is the standard I hold my work to.</p>
+        <p>If your team cares about that level of rigor, I would enjoy the conversation.</p>
         <a href="mailto:singh0811akash@gmail.com" class="btn-primary" style="display:inline-block;margin-top:.5rem">Get in Touch</a>
       </div>
     </div>
