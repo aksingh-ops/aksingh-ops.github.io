@@ -220,7 +220,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
       </p>
       <p class="hero-seeking">Looking for the right team where data shapes how decisions get made.</p>
       <div class="hero-stats">
-        <div><span class="hero-stat-val">15</span><span class="hero-stat-key">Projects</span></div>
+        <div><span class="hero-stat-val">17</span><span class="hero-stat-key">Projects</span></div>
         <div><span class="hero-stat-val">9</span><span class="hero-stat-key">Industries</span></div>
         <div><span class="hero-stat-val">3+</span><span class="hero-stat-key">Years Exp</span></div>
         <div><span class="hero-stat-val">35%</span><span class="hero-stat-key">Error Reduction</span></div>
@@ -529,6 +529,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
         <a href="https://github.com/aksingh-ops/medicare-partd-adherence-gap" target="_blank" class="industry-badge" style="background:#37474F">Government and Public Sector</a>
         <a href="https://github.com/aksingh-ops/pharma-fx-api-test-suite" target="_blank" class="industry-badge" style="background:#2C3E50">API Testing and Automation</a>
         <a href="https://github.com/aksingh-ops/cardiac-gene-expression-eda" target="_blank" class="industry-badge" style="background:#117A65">Computational Biology</a>
+        <a href="https://github.com/aksingh-ops/ai-exposure-youth-employment" target="_blank" class="industry-badge" style="background:#6D4C41">Labor Economics and AI Policy</a>
       </div>
     </div>
 
@@ -552,7 +553,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
   <div class="container">
     <div class="fade-in">
       <p class="section-label">Portfolio</p>
-      <h2 class="section-title">15 projects across 10 industries</h2>
+      <h2 class="section-title">17 projects across 10 industries</h2>
       <div class="divider"></div>
       <p class="section-sub" style="margin-bottom:1.6rem">Click any card to expand details, tools, and GitHub link.</p>
     </div>
@@ -838,6 +839,46 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
             <span class="stack-tag">yfinance</span>
           </div>
           <a href="https://github.com/aksingh-ops/network-sentiment-recommender-analytics" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="sql ml ba">
+        <div class="project-head" onclick="toggleCard(this.parentElement)">
+          <div class="project-head-left">
+            <div class="project-domain">Labor Economics / AI Policy Research</div>
+            <div class="project-title">AI Exposure and Youth Employment</div>
+            <div class="project-metric-inline">13% relative decline detected &middot; 6M CPS records &middot; real AI usage data</div>
+          </div>
+          <button class="project-toggle" onclick="event.stopPropagation();toggleCard(this.closest('.project-card'))">+</button>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Public data investigation into whether AI adoption is associated with a hiring gap for young workers, testing the Stanford Digital Economy Lab finding using only free public data. Parsed 6 million real CPS employment records via IPUMS, merged with Anthropic Economic Index AI usage data, and ran a formal weighted regression with occupation clustered standard errors. Detected a 13% relative decline for high AI exposure occupations, matching the published 13 to 19 percent range.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span><span class="stack-tag">CPS Microdata</span>
+            <span class="stack-tag">Regression</span><span class="stack-tag">IPUMS</span>
+            <span class="stack-tag">Anthropic Economic Index</span>
+          </div>
+          <a href="https://github.com/aksingh-ops/ai-exposure-youth-employment" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="ml sql ba">
+        <div class="project-head" onclick="toggleCard(this.parentElement)">
+          <div class="project-head-left">
+            <div class="project-domain">Government / Political Analytics</div>
+            <div class="project-title">Iowa Election Campaign Expenditure Forecasting</div>
+            <div class="project-metric-inline">ARIMA and SARIMAX &middot; Iowa State House and Senate &middot; time series</div>
+          </div>
+          <button class="project-toggle" onclick="event.stopPropagation();toggleCard(this.closest('.project-card'))">+</button>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Time series analysis and forecasting of Iowa State House and Senate committee expenditures using ARIMA and SARIMAX models. Covers data cleaning, exploratory analysis, and seasonal decomposition of political campaign spending patterns from publicly available Iowa Ethics and Campaign Disclosure Board records.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span><span class="stack-tag">ARIMA</span>
+            <span class="stack-tag">SARIMAX</span><span class="stack-tag">Time Series</span>
+            <span class="stack-tag">Iowa Ethics Board Data</span>
+          </div>
+          <a href="https://github.com/aksingh-ops/iowa-election---campaign-expenditures-time-series" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
         </div>
       </div>
 
