@@ -220,7 +220,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
       </p>
       <p class="hero-seeking">Looking for the right team where data shapes how decisions get made.</p>
       <div class="hero-stats">
-        <div><span class="hero-stat-val">14</span><span class="hero-stat-key">Projects</span></div>
+        <div><span class="hero-stat-val">15</span><span class="hero-stat-key">Projects</span></div>
         <div><span class="hero-stat-val">9</span><span class="hero-stat-key">Industries</span></div>
         <div><span class="hero-stat-val">3+</span><span class="hero-stat-key">Years Exp</span></div>
         <div><span class="hero-stat-val">35%</span><span class="hero-stat-key">Error Reduction</span></div>
@@ -528,6 +528,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
         <a href="https://github.com/aksingh-ops/pay-equity-anomaly-detection" target="_blank" class="industry-badge" style="background:#14532d">HR and People Analytics</a>
         <a href="https://github.com/aksingh-ops/medicare-partd-adherence-gap" target="_blank" class="industry-badge" style="background:#37474F">Government and Public Sector</a>
         <a href="https://github.com/aksingh-ops/pharma-fx-api-test-suite" target="_blank" class="industry-badge" style="background:#2C3E50">API Testing and Automation</a>
+        <a href="https://github.com/aksingh-ops/cardiac-gene-expression-eda" target="_blank" class="industry-badge" style="background:#117A65">Computational Biology</a>
       </div>
     </div>
 
@@ -551,7 +552,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
   <div class="container">
     <div class="fade-in">
       <p class="section-label">Portfolio</p>
-      <h2 class="section-title">14 projects across 9 industries</h2>
+      <h2 class="section-title">15 projects across 10 industries</h2>
       <div class="divider"></div>
       <p class="section-sub" style="margin-bottom:1.6rem">Click any card to expand details, tools, and GitHub link.</p>
     </div>
@@ -564,6 +565,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
       <button class="filter-btn" data-filter="finance">Finance</button>
       <button class="filter-btn" data-filter="api">API Testing</button>
       <button class="filter-btn" data-filter="excel">Excel</button>
+      <button class="filter-btn" data-filter="biomedical">Biomedical</button>
     </div>
     <div class="projects-grid fade-in">
 
@@ -577,7 +579,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
           <button class="project-toggle" onclick="event.stopPropagation();toggleCard(this.closest('.project-card'))">+</button>
         </div>
         <div class="project-body">
-          <p class="project-desc">Trade settlement fail rate fail rate monitoring, counterparty risk ranking, and SLO breach prediction for GBM operations, built on SEC Regulation SHO Rules 203 and 204 with 8 published industry references. SARIMAX forecasts daily fail volumes 30 days ahead. XGBoost predicts which trades breach T plus 4 mandatory close out before it happens.</p>
+          <p class="project-desc">Trade settlement fail rate monitoring, counterparty risk ranking, and SLO breach prediction for GBM operations, built on SEC Regulation SHO Rules 203 and 204 with 8 published industry references. SARIMAX forecasts daily fail volumes 30 days ahead. XGBoost predicts which trades breach T plus 4 mandatory close out before it happens.</p>
           <div class="project-stack">
             <span class="stack-tag">DuckDB SQL</span><span class="stack-tag">Python</span>
             <span class="stack-tag">XGBoost</span><span class="stack-tag">SARIMAX</span>
@@ -611,7 +613,7 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
         <div class="project-head" onclick="toggleCard(this.parentElement)">
           <div class="project-head-left">
             <div class="project-domain">API Testing and Automation</div>
-            <div class="project-title">pharma fx api test suite</div>
+            <div class="project-title">Pharma FX API Test Suite</div>
             <div class="project-metric-inline">38 automated tests &middot; FDA plus FX APIs &middot; CI/CD pipeline</div>
           </div>
           <button class="project-toggle" onclick="event.stopPropagation();toggleCard(this.closest('.project-card'))">+</button>
@@ -836,6 +838,26 @@ footer{border-top:1px solid var(--navy-border);padding:1.8rem 0;text-align:cente
             <span class="stack-tag">yfinance</span>
           </div>
           <a href="https://github.com/aksingh-ops/network-sentiment-recommender-analytics" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
+        </div>
+      </div>
+
+      <div class="project-card" data-tags="ml sql healthcare">
+        <div class="project-head" onclick="toggleCard(this.parentElement)">
+          <div class="project-head-left">
+            <div class="project-domain">Computational Biology / Biomedical Analytics</div>
+            <div class="project-title">Cardiac Gene Expression Analysis</div>
+            <div class="project-metric-inline">481 DEGs &middot; AUC 0.999 &middot; GSE36961 public dataset</div>
+          </div>
+          <button class="project-toggle" onclick="event.stopPropagation();toggleCard(this.closest('.project-card'))">+</button>
+        </div>
+        <div class="project-body">
+          <p class="project-desc">Exploratory transcriptomic analysis of hypertrophic cardiomyopathy using the GSE36961 public dataset from NCBI GEO. 106 HCM patient samples vs 39 non failing controls. Welch two sample test with false discovery rate correction identified 481 significant probes. Random Forest and Logistic Regression achieved AUC 0.999 in 5 fold cross validation. Directly motivated by TIAI published research on MYBPC3 associated HCM.</p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span><span class="stack-tag">GEOparse</span>
+            <span class="stack-tag">scipy</span><span class="stack-tag">scikit-learn</span>
+            <span class="stack-tag">statsmodels</span><span class="stack-tag">NCBI GEO</span>
+          </div>
+          <a href="https://github.com/aksingh-ops/cardiac-gene-expression-eda" target="_blank" class="project-link">View on GitHub <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg></a>
         </div>
       </div>
 
